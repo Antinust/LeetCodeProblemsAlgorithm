@@ -35,6 +35,7 @@
 #import "ACNewPractice.h"
 #import "LCList.h"
 #import "LCPercentile.h"
+#import "LCClassification.h"
 
 //#define f(a,b) a##b
 //#define g(a)   #a
@@ -215,6 +216,8 @@ typedef struct bitTestStruct{
 
 //MARK: - LC_ALL entrance
 - (void)testForLC_Entrance {
+    LCClassification *classification = [LCClassification new];
+    
     // list
     LCList *list = [LCList new];
     

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51B59AB227FC06BE00309267 /* LCClassification.mm in Sources */ = {isa = PBXBuildFile; fileRef = 51B59AB127FC06BE00309267 /* LCClassification.mm */; };
 		CF06BF3127E08301003185A6 /* LongestIncreasingSubsequence.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CF06BF2F27E08301003185A6 /* LongestIncreasingSubsequence.cpp */; };
 		CF06DB1F27E0F414003185A6 /* MoveZeroes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CF06DB1D27E0F414003185A6 /* MoveZeroes.cpp */; };
 		CF06DB2227E0F74A003185A6 /* LCArray.mm in Sources */ = {isa = PBXBuildFile; fileRef = CF06DB2127E0F74A003185A6 /* LCArray.mm */; };
@@ -145,6 +146,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		51B59AAE27FC01CA00309267 /* FindNumberOfLIS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FindNumberOfLIS.h; sourceTree = "<group>"; };
+		51B59AAF27FC024800309267 /* LCSolutionImpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCSolutionImpl.h; sourceTree = "<group>"; };
+		51B59AB027FC06BE00309267 /* LCClassification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCClassification.h; sourceTree = "<group>"; };
+		51B59AB127FC06BE00309267 /* LCClassification.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = LCClassification.mm; sourceTree = "<group>"; };
 		CF06BF2F27E08301003185A6 /* LongestIncreasingSubsequence.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LongestIncreasingSubsequence.cpp; sourceTree = "<group>"; };
 		CF06BF3027E08301003185A6 /* LongestIncreasingSubsequence.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LongestIncreasingSubsequence.hpp; sourceTree = "<group>"; };
 		CF06DB1D27E0F414003185A6 /* MoveZeroes.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MoveZeroes.cpp; sourceTree = "<group>"; };
@@ -538,11 +543,10 @@
 				CFAECBF527D2047E0037AC2E /* Minimax */,
 				CFAECBCA27CCB7F40037AC2E /* Design */,
 				CFAECBBB27CC64050037AC2E /* percentile */,
-				CFAE440123D31D6400B67A4F /* TargetSum.cpp */,
-				CFAE440223D31D6400B67A4F /* TargetSum.hpp */,
-				CF2A9CF627B7A1330008F578 /* OperationComplexityO1.cpp */,
-				CF2A9CF727B7A1330008F578 /* OperationComplexityO1.hpp */,
 				CFAECBF927D204E00037AC2E /* PublicCommon.h */,
+				51B59AAF27FC024800309267 /* LCSolutionImpl.h */,
+				51B59AB027FC06BE00309267 /* LCClassification.h */,
+				51B59AB127FC06BE00309267 /* LCClassification.mm */,
 			);
 			path = lc;
 			sourceTree = "<group>";
@@ -612,6 +616,8 @@
 		CFAECBFA27D340920037AC2E /* DFS&BFS */ = {
 			isa = PBXGroup;
 			children = (
+				CFAE440123D31D6400B67A4F /* TargetSum.cpp */,
+				CFAE440223D31D6400B67A4F /* TargetSum.hpp */,
 				CF3E94C427FAB2150058D5CF /* SearchPublicHeader */,
 				CF2A9CF927B7F26F0008F578 /* BSTIterator.cpp */,
 				CF2A9CFA27B7F26F0008F578 /* BSTIterator.hpp */,
@@ -837,6 +843,7 @@
 				CFDDE7AE27F5A0720060CE44 /* LongestValidParentheses.hpp */,
 				CFDDE7B927F82C2B0060CE44 /* EditDistance.cpp */,
 				CFDDE7BA27F82C2B0060CE44 /* EditDistance.hpp */,
+				51B59AAE27FC01CA00309267 /* FindNumberOfLIS.h */,
 			);
 			path = DynamicProgramming;
 			sourceTree = "<group>";
@@ -955,6 +962,8 @@
 		CFEBC1A327EC03C100BC86DF /* HashMap */ = {
 			isa = PBXGroup;
 			children = (
+				CF2A9CF627B7A1330008F578 /* OperationComplexityO1.cpp */,
+				CF2A9CF727B7A1330008F578 /* OperationComplexityO1.hpp */,
 				CFEBC1A427EC03CC00BC86DF /* ImplementTrie.cpp */,
 				CFEBC1A527EC03CC00BC86DF /* ImplementTrie.hpp */,
 				CF3E94C627FAE25F0058D5CF /* ValidSoduku.hpp */,
@@ -1209,6 +1218,7 @@
 				CFC29AA727E0345F00B78C2B /* ShortestUnsortedContinuousSubarray.cpp in Sources */,
 				CFEBBEA227E3257A00BC86DF /* MaximalSquare.cpp in Sources */,
 				CF3E94BE27F9479D0058D5CF /* MyAtoi.cpp in Sources */,
+				51B59AB227FC06BE00309267 /* LCClassification.mm in Sources */,
 				CFDDE78F27F160BF0060CE44 /* ACNewPractice.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
