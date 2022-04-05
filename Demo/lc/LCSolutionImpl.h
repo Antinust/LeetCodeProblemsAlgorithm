@@ -10,5 +10,9 @@
 #define LCSolutionImpl_h
 
 #import "FindNumberOfLIS.h"
+#import "PartitionEqualSubsetSum.h"
+#import "PalindromicSubstrings.h"
+#import "RotateImage.h"
+#import "DecodeString.h"
 
 #endif /* LCSolutionImpl_h */

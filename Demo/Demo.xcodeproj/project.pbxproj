@@ -150,6 +150,10 @@
 		51B59AAF27FC024800309267 /* LCSolutionImpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCSolutionImpl.h; sourceTree = "<group>"; };
 		51B59AB027FC06BE00309267 /* LCClassification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCClassification.h; sourceTree = "<group>"; };
 		51B59AB127FC06BE00309267 /* LCClassification.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = LCClassification.mm; sourceTree = "<group>"; };
+		51B59AB327FC31B200309267 /* PartitionEqualSubsetSum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PartitionEqualSubsetSum.h; sourceTree = "<group>"; };
+		51B59AB427FC5E4600309267 /* PalindromicSubstrings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PalindromicSubstrings.h; sourceTree = "<group>"; };
+		51B59AB527FC6A1500309267 /* RotateImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RotateImage.h; sourceTree = "<group>"; };
+		51B59AB627FC6EFB00309267 /* DecodeString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DecodeString.h; sourceTree = "<group>"; };
 		CF06BF2F27E08301003185A6 /* LongestIncreasingSubsequence.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LongestIncreasingSubsequence.cpp; sourceTree = "<group>"; };
 		CF06BF3027E08301003185A6 /* LongestIncreasingSubsequence.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LongestIncreasingSubsequence.hpp; sourceTree = "<group>"; };
 		CF06DB1D27E0F414003185A6 /* MoveZeroes.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MoveZeroes.cpp; sourceTree = "<group>"; };
@@ -490,6 +494,7 @@
 				CF3E94BD27F9479D0058D5CF /* MyAtoi.hpp */,
 				CF3E94BF27F957810058D5CF /* LongestCommonPrefix.cpp */,
 				CF3E94C027F957810058D5CF /* LongestCommonPrefix.hpp */,
+				51B59AB627FC6EFB00309267 /* DecodeString.h */,
 			);
 			path = String;
 			sourceTree = "<group>";
@@ -821,6 +826,7 @@
 				CFDDE78627EFF9410060CE44 /* FindAllAnagramsInAString.hpp */,
 				CFDDE79527F170700060CE44 /* SpiralOrder.cpp */,
 				CFDDE79627F170700060CE44 /* SpiralOrder.hpp */,
+				51B59AB527FC6A1500309267 /* RotateImage.h */,
 			);
 			path = Array;
 			sourceTree = "<group>";
@@ -844,6 +850,8 @@
 				CFDDE7B927F82C2B0060CE44 /* EditDistance.cpp */,
 				CFDDE7BA27F82C2B0060CE44 /* EditDistance.hpp */,
 				51B59AAE27FC01CA00309267 /* FindNumberOfLIS.h */,
+				51B59AB327FC31B200309267 /* PartitionEqualSubsetSum.h */,
+				51B59AB427FC5E4600309267 /* PalindromicSubstrings.h */,
 			);
 			path = DynamicProgramming;
 			sourceTree = "<group>";
@@ -1394,6 +1402,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FM4J7MCTQW;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/Demo/third-party/**",
 					"$(SRCROOT)/Demo/xlnt/include/**",
@@ -1419,6 +1429,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y7XP5PJM7J;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/Demo/third-party/**",
 					"$(SRCROOT)/Demo/xlnt/include/**",

@@ -27,7 +27,7 @@ namespace FindNumberOfLIS {
  
  
  */
-lc/LCSolutionImpl.h
+
 class Solution {
 public:
     int findNumberOfLIS(vector<int>& nums) {
