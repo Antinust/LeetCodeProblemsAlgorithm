@@ -196,6 +196,8 @@
 		CF3E94C327FAB1990058D5CF /* WordSearch.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = WordSearch.hpp; sourceTree = "<group>"; };
 		CF3E94C527FAB2390058D5CF /* SearchPublicHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchPublicHeader.h; sourceTree = "<group>"; };
 		CF3E94C627FAE25F0058D5CF /* ValidSoduku.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ValidSoduku.hpp; sourceTree = "<group>"; };
+		CF3E94D427FD88400058D5CF /* QueueReconstructionByHeight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QueueReconstructionByHeight.h; sourceTree = "<group>"; };
+		CF3E94D527FE76560058D5CF /* WordBreak.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WordBreak.h; sourceTree = "<group>"; };
 		CF4E2C5B27D4EE9000A6C522 /* CourseSchedulePrintOrder.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CourseSchedulePrintOrder.cpp; sourceTree = "<group>"; };
 		CF4E2C5C27D4EE9000A6C522 /* CourseSchedulePrintOrder.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CourseSchedulePrintOrder.hpp; sourceTree = "<group>"; };
 		CF4E2C5F27D5047800A6C522 /* BTLevelOrderTraversal.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BTLevelOrderTraversal.cpp; sourceTree = "<group>"; };
@@ -504,6 +506,7 @@
 				CF3E94BF27F957810058D5CF /* LongestCommonPrefix.cpp */,
 				CF3E94C027F957810058D5CF /* LongestCommonPrefix.hpp */,
 				51B59AB627FC6EFB00309267 /* DecodeString.h */,
+				CF3E94D527FE76560058D5CF /* WordBreak.h */,
 			);
 			path = String;
 			sourceTree = "<group>";
@@ -938,6 +941,7 @@
 				CFEBBE9527E2CA0700BC86DF /* LCGreedy.mm */,
 				CFEBBE9727E2CA5200BC86DF /* CoinChange.cpp */,
 				CFEBBE9827E2CA5200BC86DF /* CoinChange.hpp */,
+				CF3E94D427FD88400058D5CF /* QueueReconstructionByHeight.h */,
 			);
 			path = Greedy;
 			sourceTree = "<group>";

@@ -15,11 +15,26 @@
 {
     self = [super init];
     if (self) {
+        [self testForLC_string];
+
         [self test_DP];
     }
     return self;
 }
 
+//MARK: - string
+- (void)testForLC_string {
+    WordBreak::Solution *so = new WordBreak::Solution();
+    string str = "aaaaaaa";
+    vector<string> wordDict = {"aaaa","aaa"};
+    
+//    string str = "aebbbbs";
+//    vector<string> wordDict = {"a","aeb","ebbbb","s","eb"};
+
+//    vector<string> wordDict = {"apple","pen"};
+//    string str = "applepenapple";
+    so->wordBreak(str, wordDict);
+}
 
 //MARK: - DP
 - (void)test_DP {

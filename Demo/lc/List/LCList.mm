@@ -37,8 +37,8 @@
 }
 
 - (void)testForLC_IntersectionOfTwoLinkedLists {
-    IntersectionOfTwoLinkedLists::Solution *sol =
-                    new IntersectionOfTwoLinkedLists::Solution();
+//    IntersectionOfTwoLinkedLists::Solution *sol =
+//                    new IntersectionOfTwoLinkedLists::Solution();
 //    1,2,3,4,5
 //    sol->getIntersectionNode(<#ListNode *headA#>, <#ListNode *headB#>)
 }

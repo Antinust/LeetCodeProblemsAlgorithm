@@ -15,5 +15,7 @@
 #import "RotateImage.h"
 #import "DecodeString.h"
 #import "BestTimeToBuyAndSellStockWithCooldown.h"
+#import "QueueReconstructionByHeight.h"
+#import "WordBreak.h"
 
 #endif /* LCSolutionImpl_h */
