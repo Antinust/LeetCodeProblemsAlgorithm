@@ -155,6 +155,7 @@
 		51B59AB527FC6A1500309267 /* RotateImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RotateImage.h; sourceTree = "<group>"; };
 		51B59AB627FC6EFB00309267 /* DecodeString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DecodeString.h; sourceTree = "<group>"; };
 		51B59AB827FD208000309267 /* BestTimeToBuyAndSellStockWithCooldown.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BestTimeToBuyAndSellStockWithCooldown.h; sourceTree = "<group>"; };
+		51B59C1D27FED0E600309267 /* LetterCombinations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LetterCombinations.h; sourceTree = "<group>"; };
 		CF06BF2F27E08301003185A6 /* LongestIncreasingSubsequence.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LongestIncreasingSubsequence.cpp; sourceTree = "<group>"; };
 		CF06BF3027E08301003185A6 /* LongestIncreasingSubsequence.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LongestIncreasingSubsequence.hpp; sourceTree = "<group>"; };
 		CF06DB1D27E0F414003185A6 /* MoveZeroes.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MoveZeroes.cpp; sourceTree = "<group>"; };
@@ -651,6 +652,7 @@
 				CFAECC0527D35A4E0037AC2E /* KthSmallestInBST.hpp */,
 				CFAECC0727D364FB0037AC2E /* BalanceBST.cpp */,
 				CFAECC0827D364FB0037AC2E /* BalanceBST.hpp */,
+				51B59C1D27FED0E600309267 /* LetterCombinations.h */,
 			);
 			path = "DFS&BFS";
 			sourceTree = "<group>";

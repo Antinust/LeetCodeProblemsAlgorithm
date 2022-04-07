@@ -16,11 +16,20 @@
     self = [super init];
     if (self) {
         [self testForLC_string];
-
+        [self test_letterComb];
         [self test_DP];
     }
     return self;
 }
+
+//MARK: - DFS & BFS
+- (void)test_letterComb {
+    LetterCombinations::Solution *so = new LetterCombinations::Solution();
+    string str = "23";
+    so->letterCombinations(str);
+}
+
+
 
 //MARK: - string
 - (void)testForLC_string {
