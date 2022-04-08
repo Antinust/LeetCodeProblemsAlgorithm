@@ -20,6 +20,7 @@
 #include <stack>
 #include <set>
 #include <iostream>
+#include <sstream>
 #include <cmath>
 
 using namespace std;

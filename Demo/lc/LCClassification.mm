@@ -16,10 +16,21 @@
     self = [super init];
     if (self) {
         [self testForLC_string];
+        
         [self test_letterComb];
+        [self testForLC_serialize];
+        
         [self test_DP];
+        [self testForLC_MeetingRooms2];
     }
     return self;
+}
+
+//MARK: - Array
+- (void)testForLC_MeetingRooms2 {
+    MeetingRooms2::Solution *so = new MeetingRooms2::Solution();
+    vector<vector<int>> intervals = {{13, 15}, {1, 13}};
+    so->minMeetingRooms(intervals);
 }
 
 //MARK: - DFS & BFS
@@ -29,6 +40,14 @@
     so->letterCombinations(str);
 }
 
+- (void)testForLC_serialize {
+//    string str = ",1,2,3,X,X,4,5,6,7,X,X";
+    string str = ",1,2,X,X,3,4,X,X,5,X,X";
+    SerializeAndDeserializeBinaryTree::Codec *codec = new SerializeAndDeserializeBinaryTree::Codec();
+    TreeNode *node = codec->deserialize(str);
+    string aStr = codec->serialize(node);
+    NSLog(@"str:%s", aStr.c_str());
+}
 
 
 //MARK: - string

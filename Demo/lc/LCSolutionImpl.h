@@ -18,5 +18,9 @@
 #import "QueueReconstructionByHeight.h"
 #import "WordBreak.h"
 #import "LetterCombinations.h"
+#import "MeetingRooms2.h"
+#import "TaskScheduler.h"
+#import "BurstBalloons.h"
+#import "SerializeAndDeserializeBinaryTree.h"
 
 #endif /* LCSolutionImpl_h */
