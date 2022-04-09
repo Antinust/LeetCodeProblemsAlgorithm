@@ -18,6 +18,7 @@
         [self testForLC_string];
         
         [self test_letterComb];
+        [self testForLC_rmInvalidParentheses];
         [self testForLC_serialize];
         
         [self test_DP];
@@ -38,6 +39,12 @@
     LetterCombinations::Solution *so = new LetterCombinations::Solution();
     string str = "23";
     so->letterCombinations(str);
+}
+
+- (void)testForLC_rmInvalidParentheses {
+    RemoveInvalidParentheses::Solution *so = new RemoveInvalidParentheses::Solution();
+    string s = "()())()";
+    so->removeInvalidParentheses(s);
 }
 
 - (void)testForLC_serialize {

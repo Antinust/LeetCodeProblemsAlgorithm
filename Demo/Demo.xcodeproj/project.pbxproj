@@ -211,6 +211,8 @@
 		CFA1B3D627FF28ED0013D146 /* TaskScheduler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaskScheduler.h; sourceTree = "<group>"; };
 		CFA1B3D727FF3BFA0013D146 /* BurstBalloons.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BurstBalloons.h; sourceTree = "<group>"; };
 		CFA1B3D827FFC76C0013D146 /* SerializeAndDeserializeBinaryTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SerializeAndDeserializeBinaryTree.h; sourceTree = "<group>"; };
+		CFA1B3D9280080720013D146 /* RemoveInvalidParentheses.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RemoveInvalidParentheses.h; sourceTree = "<group>"; };
+		CFA1B3DA280117010013D146 /* RegularExpressionMatching.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegularExpressionMatching.h; sourceTree = "<group>"; };
 		CFAE440123D31D6400B67A4F /* TargetSum.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TargetSum.cpp; sourceTree = "<group>"; };
 		CFAE440223D31D6400B67A4F /* TargetSum.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TargetSum.hpp; sourceTree = "<group>"; };
 		CFAECBBC27CC64380037AC2E /* FindMedian.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FindMedian.cpp; sourceTree = "<group>"; };
@@ -658,6 +660,7 @@
 				CFAECC0827D364FB0037AC2E /* BalanceBST.hpp */,
 				51B59C1D27FED0E600309267 /* LetterCombinations.h */,
 				CFA1B3D827FFC76C0013D146 /* SerializeAndDeserializeBinaryTree.h */,
+				CFA1B3D9280080720013D146 /* RemoveInvalidParentheses.h */,
 			);
 			path = "DFS&BFS";
 			sourceTree = "<group>";
@@ -874,6 +877,7 @@
 				51B59AB327FC31B200309267 /* PartitionEqualSubsetSum.h */,
 				51B59AB427FC5E4600309267 /* PalindromicSubstrings.h */,
 				CFA1B3D727FF3BFA0013D146 /* BurstBalloons.h */,
+				CFA1B3DA280117010013D146 /* RegularExpressionMatching.h */,
 			);
 			path = DynamicProgramming;
 			sourceTree = "<group>";

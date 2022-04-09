@@ -22,5 +22,6 @@
 #import "TaskScheduler.h"
 #import "BurstBalloons.h"
 #import "SerializeAndDeserializeBinaryTree.h"
+#import "RemoveInvalidParentheses.h"
 
 #endif /* LCSolutionImpl_h */
