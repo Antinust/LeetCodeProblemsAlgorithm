@@ -8,14 +8,19 @@
 
 #import <Foundation/Foundation.h>
 #include <pthread.h>
-class H2O {
-public:
+
+@interface MultiThread : NSObject
+
+@end
+
+//class H2O {
+//public:
 //    int h;
 //    mutex m;
 //    condition_variable cv;
-    H2O() {
+//    H2O() {
 //        h = 0;
-    }
+//    }
 
 //    void hydrogen(function<void()> releaseHydrogen) {
 //        unique_lock<mutex> l(m);
@@ -34,5 +39,5 @@ public:
 //        h=0;
 //        cv.notify_all();
 //    }
-};
+//};
 

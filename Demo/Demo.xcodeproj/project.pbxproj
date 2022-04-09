@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		51B59AB227FC06BE00309267 /* LCClassification.mm in Sources */ = {isa = PBXBuildFile; fileRef = 51B59AB127FC06BE00309267 /* LCClassification.mm */; };
+		51B59C212801416800309267 /* CPPTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 51B59C202801416800309267 /* CPPTest.mm */; };
+		51B59C24280142CB00309267 /* MultiThread.mm in Sources */ = {isa = PBXBuildFile; fileRef = 51B59C23280142CB00309267 /* MultiThread.mm */; };
 		CF06BF3127E08301003185A6 /* LongestIncreasingSubsequence.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CF06BF2F27E08301003185A6 /* LongestIncreasingSubsequence.cpp */; };
 		CF06DB1F27E0F414003185A6 /* MoveZeroes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CF06DB1D27E0F414003185A6 /* MoveZeroes.cpp */; };
 		CF06DB2227E0F74A003185A6 /* LCArray.mm in Sources */ = {isa = PBXBuildFile; fileRef = CF06DB2127E0F74A003185A6 /* LCArray.mm */; };
 		CF06DDBF27E170B3003185A6 /* LongestConsecutiveSequence.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CF06DDBD27E170B3003185A6 /* LongestConsecutiveSequence.cpp */; };
 		CF2A9CF827B7A1330008F578 /* OperationComplexityO1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CF2A9CF627B7A1330008F578 /* OperationComplexityO1.cpp */; };
 		CF2A9CFB27B7F26F0008F578 /* BSTIterator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CF2A9CF927B7F26F0008F578 /* BSTIterator.cpp */; };
-		CF2EB09023C07581007FFA14 /* H2O.mm in Sources */ = {isa = PBXBuildFile; fileRef = CF2EB08F23C07581007FFA14 /* H2O.mm */; };
 		CF2EB09323C094F1007FFA14 /* H2O.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CF2EB09123C094F1007FFA14 /* H2O.cpp */; };
 		CF3B348721F06E8E002473BF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CF3B348621F06E8E002473BF /* AppDelegate.m */; };
 		CF3B348A21F06E8E002473BF /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = CF3B348921F06E8E002473BF /* ViewController.mm */; };
@@ -156,6 +157,10 @@
 		51B59AB627FC6EFB00309267 /* DecodeString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DecodeString.h; sourceTree = "<group>"; };
 		51B59AB827FD208000309267 /* BestTimeToBuyAndSellStockWithCooldown.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BestTimeToBuyAndSellStockWithCooldown.h; sourceTree = "<group>"; };
 		51B59C1D27FED0E600309267 /* LetterCombinations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LetterCombinations.h; sourceTree = "<group>"; };
+		51B59C1E280140D700309267 /* CPPVirtualFuncTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPPVirtualFuncTest.h; sourceTree = "<group>"; };
+		51B59C1F2801416800309267 /* CPPTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPPTest.h; sourceTree = "<group>"; };
+		51B59C202801416800309267 /* CPPTest.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CPPTest.mm; sourceTree = "<group>"; };
+		51B59C23280142CB00309267 /* MultiThread.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MultiThread.mm; sourceTree = "<group>"; };
 		CF06BF2F27E08301003185A6 /* LongestIncreasingSubsequence.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LongestIncreasingSubsequence.cpp; sourceTree = "<group>"; };
 		CF06BF3027E08301003185A6 /* LongestIncreasingSubsequence.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LongestIncreasingSubsequence.hpp; sourceTree = "<group>"; };
 		CF06DB1D27E0F414003185A6 /* MoveZeroes.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MoveZeroes.cpp; sourceTree = "<group>"; };
@@ -168,8 +173,7 @@
 		CF2A9CF727B7A1330008F578 /* OperationComplexityO1.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = OperationComplexityO1.hpp; sourceTree = "<group>"; };
 		CF2A9CF927B7F26F0008F578 /* BSTIterator.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BSTIterator.cpp; sourceTree = "<group>"; };
 		CF2A9CFA27B7F26F0008F578 /* BSTIterator.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BSTIterator.hpp; sourceTree = "<group>"; };
-		CF2EB08E23C07581007FFA14 /* H2O.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = H2O.h; sourceTree = "<group>"; };
-		CF2EB08F23C07581007FFA14 /* H2O.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = H2O.mm; sourceTree = "<group>"; };
+		CF2EB08E23C07581007FFA14 /* MultiThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiThread.h; sourceTree = "<group>"; };
 		CF2EB09123C094F1007FFA14 /* H2O.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = H2O.cpp; sourceTree = "<group>"; };
 		CF2EB09223C094F1007FFA14 /* H2O.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = H2O.hpp; sourceTree = "<group>"; };
 		CF3B348221F06E8E002473BF /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -439,9 +443,21 @@
 			path = TradeStock;
 			sourceTree = "<group>";
 		};
+		51B59C222801420200309267 /* MultiThread */ = {
+			isa = PBXGroup;
+			children = (
+				51B59C23280142CB00309267 /* MultiThread.mm */,
+				CF2EB08E23C07581007FFA14 /* MultiThread.h */,
+				CF2EB09123C094F1007FFA14 /* H2O.cpp */,
+				CF2EB09223C094F1007FFA14 /* H2O.hpp */,
+			);
+			path = MultiThread;
+			sourceTree = "<group>";
+		};
 		CF3B347921F06E8E002473BF = {
 			isa = PBXGroup;
 			children = (
+				51B59C222801420200309267 /* MultiThread */,
 				CFDDE78827F044D70060CE44 /* CPlusPlus */,
 				CFAE440023D31D4500B67A4F /* lc */,
 				CF3B348421F06E8E002473BF /* Demo */,
@@ -477,10 +493,6 @@
 				CF3B349421F06E8F002473BF /* main.m */,
 				CFE08EDC21F2CF2500EB08C1 /* SecondVC.h */,
 				CFE08EDD21F2CF2500EB08C1 /* SecondVC.m */,
-				CF2EB08E23C07581007FFA14 /* H2O.h */,
-				CF2EB08F23C07581007FFA14 /* H2O.mm */,
-				CF2EB09123C094F1007FFA14 /* H2O.cpp */,
-				CF2EB09223C094F1007FFA14 /* H2O.hpp */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -905,6 +917,9 @@
 			children = (
 				CFDDE78927F0450C0060CE44 /* CPPBaseFunctionTest.cpp */,
 				CFDDE78A27F0450C0060CE44 /* CPPBaseFunctionTest.hpp */,
+				51B59C1E280140D700309267 /* CPPVirtualFuncTest.h */,
+				51B59C1F2801416800309267 /* CPPTest.h */,
+				51B59C202801416800309267 /* CPPTest.mm */,
 			);
 			path = CPlusPlus;
 			sourceTree = "<group>";
@@ -1152,9 +1167,9 @@
 				CFDDE7A827F3E3640060CE44 /* MaxPathSum.cpp in Sources */,
 				CFC2945E27DC61BF00B78C2B /* LCFind.mm in Sources */,
 				CFEBC16D27E6CB6000BC86DF /* SymmetricTree.cpp in Sources */,
+				51B59C24280142CB00309267 /* MultiThread.mm in Sources */,
 				CF4E2C5D27D4EE9000A6C522 /* CourseSchedulePrintOrder.cpp in Sources */,
 				CFC2941E27D7455C00B78C2B /* MaximalRectangle.cpp in Sources */,
-				CF2EB09023C07581007FFA14 /* H2O.mm in Sources */,
 				CFDDE78427EF100E0060CE44 /* GroupAnagrams.cpp in Sources */,
 				CFAECBE027D0539A0037AC2E /* LCDesign.mm in Sources */,
 				CF3B348A21F06E8E002473BF /* ViewController.mm in Sources */,
@@ -1216,6 +1231,7 @@
 				CFAECC0027D342540037AC2E /* InorderTraversal.cpp in Sources */,
 				CFC2944D27DAD61800B78C2B /* FindMinInRotatedSortedArray2.cpp in Sources */,
 				CFEBC1A627EC03CC00BC86DF /* ImplementTrie.cpp in Sources */,
+				51B59C212801416800309267 /* CPPTest.mm in Sources */,
 				CF4E2C6427D5E1B800A6C522 /* NumIslands.cpp in Sources */,
 				CFEBC18327E8326200BC86DF /* GenerateParentheses.cpp in Sources */,
 				CF06DB2227E0F74A003185A6 /* LCArray.mm in Sources */,

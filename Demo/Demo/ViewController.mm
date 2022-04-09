@@ -8,10 +8,10 @@
 
 #import "ViewController.h"
 #import "SecondVC.h"
+#import "MultiThread.h"
 #include "AtomicTest.h"
 #include <sys/socket.h>
 #include <arpa/inet.h>
-#include "H2O.h"
 #include "TargetSum.hpp"
 #include <string>
 #include <vector>
@@ -36,6 +36,7 @@
 #import "LCList.h"
 #import "LCPercentile.h"
 #import "LCClassification.h"
+#import "CPPTest.h"
 
 //#define f(a,b) a##b
 //#define g(a)   #a
@@ -245,6 +246,9 @@ typedef struct bitTestStruct{
     base *pBase = new derived;
     cout << "---" << endl;
     delete pBase;
+    
+    CPPTest *test = [CPPTest new];
+    
 }
 
 - (void)viewDidLoad {
@@ -265,18 +269,8 @@ typedef struct bitTestStruct{
     
 //    [self testForLC_Median];
     
-    
 //    NSLog(@"std::chrono::system_clock::now:%lu", std::chrono::system_clock::now);
-//    FooBar foobar =  FooBar(2);
-    
-//    FooBar *foobar = new FooBar(2);
-//    foobar->foo(nullptr);
-//    foobar->foo(nullptr);
-//
-//    foobar->bar(nullptr);
-//    foobar->bar(nullptr);
 
-    
     
 //    Solution sol = Solution();
 //
@@ -304,25 +298,6 @@ typedef struct bitTestStruct{
 //    vector<vector<int>>vtest = {{0, 1}, {1, 0}};
 //    sol.canFinish(2, vtest);
     
-//    //app , apple , beer , add , jam , rental
-//    trie.insert("app");
-//    trie.insert("apple");
-//    trie.insert("beer");
-//    trie.insert("add");
-//    trie.insert("jam");
-//    trie.insert("rental");
-//
-//    trie.search("apple");   // returns true
-//    trie.search("app");     // returns false
-//
-//    trie.startsWith("app"); // returns true
-//    trie.search("app");     // returns true
-//    trie.startsWith("jan");     // returns true
-    
-    
-     
-     
-
 //    ret = sol->coinChange(num, 9);
 //    NSLog(@"ret2:%d", ret);
     // Do any additional setup after loading the view, typically from a nib.
@@ -343,6 +318,23 @@ typedef struct bitTestStruct{
 //    _thread = [[NSThread alloc] initWithTarget:self selector:@selector(threadTest) object:nil];
 //    [_thread start];
 
+}
+
+- (void)test_trie {
+    //    //app , apple , beer , add , jam , rental
+    //    trie.insert("app");
+    //    trie.insert("apple");
+    //    trie.insert("beer");
+    //    trie.insert("add");
+    //    trie.insert("jam");
+    //    trie.insert("rental");
+    //
+    //    trie.search("apple");   // returns true
+    //    trie.search("app");     // returns false
+    //
+    //    trie.startsWith("app"); // returns true
+    //    trie.search("app");     // returns true
+    //    trie.startsWith("jan");     // returns true
 }
 
 
