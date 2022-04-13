@@ -23,6 +23,42 @@ namespace TrappingRainWater {
  
     算出一个值后，把栈顶元素出栈；递归前面一个步骤，直到栈顶元素大于当前元素，或者栈为空；压栈当前元素
  */
+
+// 下面的代码(算法)较简单 快速
+class Solution {
+public:
+    int trap(vector<int>& h) {
+        int len = h.size();
+        if (h.size() == 1) {
+            return 0;
+        }
+        // h.push_back(0);
+        stack<int>sta; //store index of array
+        sta.push(0);
+        int sum = 0;
+        for (int i = 1; i < len; i++) {
+            //如果栈不空并且当前指向的高度大于栈顶高度就一直循环
+            while (!sta.empty() && h[sta.top()] < h[i]) {
+                int topIndex = sta.top();
+                sta.pop();
+                if (sta.empty()) {
+                    break;
+                }
+                // int cnt = 1; 无需cnt，宽通过index的差值即可求出
+                // 相等情况，因为leftIndex==topIndex，故高度为0，sum+=0
+                // while(!sta.empty() && h[sta.top()] == h[topIndex]) {
+                //     sta.pop();
+                // }
+                // 注意宽度的正确值
+                sum += (i - sta.top() - 1) * (min(h[i], h[sta.top()]) - h[topIndex]) ; //无需 * cnt
+            }
+            sta.push(i);
+
+        }
+        return sum;
+    }
+};
+
 //class Solution {
 //    struct Node {
 //        int val = 0;
@@ -75,38 +111,38 @@ namespace TrappingRainWater {
 
 //MARK: - concise writting style
 // stack 记录index 即可，不需要记录整个Node
-class Solution {
-public:
-    int trap(vector<int>& height) {
-        if (height.size() <= 2) {
-            return 0;
-        }
-        int totalSum = 0;
-        stack<int> stack;
-        stack.push(0);
-        int totalCnt = (int)height.size();
-        for (int i = 1; i < totalCnt; i++) {
-            while (!stack.empty() && height[i] > height[stack.top()]) {
-                int topVal = height[stack.top()];
-                stack.pop();
-
-                // 若栈顶元素相同，则pop只剩下一个
-                while (!stack.empty() && topVal == height[stack.top()]) {
-                    stack.pop();
-                }
-                
-                if (!stack.empty()) {
-                    int stackTop = stack.top();
-                    int rectHeight = std::min(height[stackTop], height[i]) - topVal;
-                    int area = rectHeight * (i - stackTop - 1);
-                    totalSum += area;
-                }
-            }
-            stack.push(i);
-        }
-        return totalSum;
-    }
-};
+//class Solution {
+//public:
+//    int trap(vector<int>& height) {
+//        if (height.size() <= 2) {
+//            return 0;
+//        }
+//        int totalSum = 0;
+//        stack<int> stack;
+//        stack.push(0);
+//        int totalCnt = (int)height.size();
+//        for (int i = 1; i < totalCnt; i++) {
+//            while (!stack.empty() && height[i] > height[stack.top()]) {
+//                int topVal = height[stack.top()];
+//                stack.pop();
+//
+//                // 若栈顶元素相同，则pop只剩下一个
+//                while (!stack.empty() && topVal == height[stack.top()]) {
+//                    stack.pop();
+//                }
+//
+//                if (!stack.empty()) {
+//                    int stackTop = stack.top();
+//                    int rectHeight = std::min(height[stackTop], height[i]) - topVal;
+//                    int area = rectHeight * (i - stackTop - 1);
+//                    totalSum += area;
+//                }
+//            }
+//            stack.push(i);
+//        }
+//        return totalSum;
+//    }
+//};
 }
 
 #endif /* TrappingRainWater_hpp */

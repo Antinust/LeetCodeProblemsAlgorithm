@@ -156,7 +156,7 @@
 //
 //    [self testForLC_KthLargest];
     
-//    [self testForLC_MaxRectangle];
+    [self testForLC_MaxRectangle];
     
     [self testForLC_trapRain];
     

@@ -211,6 +211,9 @@
 		CF4E2C6327D5E1B800A6C522 /* NumIslands.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = NumIslands.hpp; sourceTree = "<group>"; };
 		CF6A4023225EE4AB002CC554 /* DuMediaABTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuMediaABTest.h; sourceTree = "<group>"; };
 		CF6A4024225EE4AB002CC554 /* DuMediaABTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuMediaABTest.m; sourceTree = "<group>"; };
+		CF8A55B528044EEE00AA3E7E /* AddTwoNumbers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddTwoNumbers.h; sourceTree = "<group>"; };
+		CF8A55B62805516200AA3E7E /* LongestPalindrome.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LongestPalindrome.h; sourceTree = "<group>"; };
+		CF8A55B7280560DF00AA3E7E /* ContainerWithMostWater.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContainerWithMostWater.h; sourceTree = "<group>"; };
 		CFA1B3D527FEF1070013D146 /* MeetingRooms2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeetingRooms2.h; sourceTree = "<group>"; };
 		CFA1B3D627FF28ED0013D146 /* TaskScheduler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaskScheduler.h; sourceTree = "<group>"; };
 		CFA1B3D727FF3BFA0013D146 /* BurstBalloons.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BurstBalloons.h; sourceTree = "<group>"; };
@@ -457,6 +460,7 @@
 		CF3B347921F06E8E002473BF = {
 			isa = PBXGroup;
 			children = (
+				CF8A55B428028FDD00AA3E7E /* net */,
 				51B59C222801420200309267 /* MultiThread */,
 				CFDDE78827F044D70060CE44 /* CPlusPlus */,
 				CFAE440023D31D4500B67A4F /* lc */,
@@ -557,6 +561,13 @@
 				CFC2947D27DF231F00B78C2B /* JumpGame2.hpp */,
 			);
 			path = BFS;
+			sourceTree = "<group>";
+		};
+		CF8A55B428028FDD00AA3E7E /* net */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = net;
 			sourceTree = "<group>";
 		};
 		CFAE440023D31D4500B67A4F /* lc */ = {
@@ -862,6 +873,7 @@
 				CFDDE79627F170700060CE44 /* SpiralOrder.hpp */,
 				51B59AB527FC6A1500309267 /* RotateImage.h */,
 				CFA1B3D527FEF1070013D146 /* MeetingRooms2.h */,
+				CF8A55B528044EEE00AA3E7E /* AddTwoNumbers.h */,
 			);
 			path = Array;
 			sourceTree = "<group>";
@@ -890,6 +902,7 @@
 				51B59AB427FC5E4600309267 /* PalindromicSubstrings.h */,
 				CFA1B3D727FF3BFA0013D146 /* BurstBalloons.h */,
 				CFA1B3DA280117010013D146 /* RegularExpressionMatching.h */,
+				CF8A55B62805516200AA3E7E /* LongestPalindrome.h */,
 			);
 			path = DynamicProgramming;
 			sourceTree = "<group>";
@@ -899,6 +912,7 @@
 			children = (
 				CFDDE76727EC9DD20060CE44 /* ThreeSum.cpp */,
 				CFDDE76827EC9DD20060CE44 /* ThreeSum.hpp */,
+				CF8A55B7280560DF00AA3E7E /* ContainerWithMostWater.h */,
 			);
 			path = TwoPointers;
 			sourceTree = "<group>";
