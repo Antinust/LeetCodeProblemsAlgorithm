@@ -51,5 +51,30 @@ public:
 
 }
 
+namespace BestTimeToTradeStock {
+/*
+ 1、使用imin 记录已经遍历过的 数组的 最小值；用若a[i]>imin, 用dp数组存储当前元素与imin的差值
+ 2、找到dp数组中的最大值
+ */
+class Solution {
+public:
+    int maxProfit(vector<int>& a) {
+        int len = a.size();
+        int imin = a[0];
+        vector<int> dp (len, 0);
+        for (int i = 1; i < len; i++) {
+            if (a[i] > imin) {
+                dp[i] = a[i] - imin;
+            }
+            imin = min(a[i], imin);
+        }
+        int ans = 0;
+        for (int j = 0; j < len; j++) {
+            ans = max(ans, dp[j]);
+        }
+        return ans;
+    }
+};
+}
 
 #endif /* BestTimeToBuyAndSellStockWithCooldown_h */

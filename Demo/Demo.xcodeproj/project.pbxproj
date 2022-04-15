@@ -214,6 +214,8 @@
 		CF8A55B528044EEE00AA3E7E /* AddTwoNumbers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddTwoNumbers.h; sourceTree = "<group>"; };
 		CF8A55B62805516200AA3E7E /* LongestPalindrome.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LongestPalindrome.h; sourceTree = "<group>"; };
 		CF8A55B7280560DF00AA3E7E /* ContainerWithMostWater.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContainerWithMostWater.h; sourceTree = "<group>"; };
+		CF9E876C2806AB6E00996A6A /* UniquePaths.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UniquePaths.h; sourceTree = "<group>"; };
+		CF9E876E28090EF400996A6A /* MajorityElement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MajorityElement.h; sourceTree = "<group>"; };
 		CFA1B3D527FEF1070013D146 /* MeetingRooms2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeetingRooms2.h; sourceTree = "<group>"; };
 		CFA1B3D627FF28ED0013D146 /* TaskScheduler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaskScheduler.h; sourceTree = "<group>"; };
 		CFA1B3D727FF3BFA0013D146 /* BurstBalloons.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BurstBalloons.h; sourceTree = "<group>"; };
@@ -570,6 +572,14 @@
 			path = net;
 			sourceTree = "<group>";
 		};
+		CF9E876D28090DF900996A6A /* QuickSort */ = {
+			isa = PBXGroup;
+			children = (
+				CF9E876E28090EF400996A6A /* MajorityElement.h */,
+			);
+			path = QuickSort;
+			sourceTree = "<group>";
+		};
 		CFAE440023D31D4500B67A4F /* lc */ = {
 			isa = PBXGroup;
 			children = (
@@ -731,6 +741,7 @@
 		CFC2942227D8819500B78C2B /* Sort */ = {
 			isa = PBXGroup;
 			children = (
+				CF9E876D28090DF900996A6A /* QuickSort */,
 				CFC2942327D8819F00B78C2B /* SortSortedStructure */,
 				CFC2942B27D99EF500B78C2B /* LCSort.h */,
 				CFC2942C27D99EF500B78C2B /* LCSort.mm */,
@@ -788,6 +799,7 @@
 				CFDDE78027EEC63F0060CE44 /* PathSum3.hpp */,
 				CFDDE7A627F3E3640060CE44 /* MaxPathSum.cpp */,
 				CFDDE7A727F3E3640060CE44 /* MaxPathSum.hpp */,
+				CF9E876C2806AB6E00996A6A /* UniquePaths.h */,
 			);
 			path = DFS;
 			sourceTree = "<group>";

@@ -15,6 +15,7 @@ namespace GroupAnagrams {
 
 /*
  1. map直接记录<sortedStr, unSortedStr>比记录<sortedStr, unSortedStrIndex>要好
+    定义unordered_map<string, vector<string> > map 直接使用map[sortedStr].push_back(str[i]); 
  
  2. 将每个字母出现的次数使用字符串表示，作为哈希表的键 unordered_map<array<int, 26>, vector<string>>
  */

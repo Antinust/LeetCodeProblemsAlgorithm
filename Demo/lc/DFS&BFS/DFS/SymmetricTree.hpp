@@ -13,11 +13,14 @@
 #include "PublicCommon.h"
 namespace SymmetricTree {
 /*
- // 下面这种方法不行，有badcase：[5,4,1,null,1,null,4,2,null,2,null]
+
+ new_sol:
+    1. 递归遍历判断是否为对称树即可：lc_101
+ 
+ // 下面这种方法不行，
+    有badcase：[5,4,1,null,1,null,4,2,null,2,null]
         1. 中序遍历后，然后看数组是否为回文即可
         2. 当左/右子树为空时，插入一个-INT_MIN；用于判断为空的节点是否对称
- new_sol:
-    1. 递归遍历判断是否为对称树即可
  */
 
 //    vector<int> mVec;

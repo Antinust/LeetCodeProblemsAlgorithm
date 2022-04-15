@@ -23,5 +23,5 @@
 #import "BurstBalloons.h"
 #import "SerializeAndDeserializeBinaryTree.h"
 #import "RemoveInvalidParentheses.h"
-
+#import "MajorityElement.h"
 #endif /* LCSolutionImpl_h */
