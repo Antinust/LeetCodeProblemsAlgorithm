@@ -24,4 +24,7 @@
 #import "SerializeAndDeserializeBinaryTree.h"
 #import "RemoveInvalidParentheses.h"
 #import "MajorityElement.h"
+
+#import "LFU.h"
+
 #endif /* LCSolutionImpl_h */

@@ -161,6 +161,7 @@
 		51B59C1F2801416800309267 /* CPPTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPPTest.h; sourceTree = "<group>"; };
 		51B59C202801416800309267 /* CPPTest.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CPPTest.mm; sourceTree = "<group>"; };
 		51B59C23280142CB00309267 /* MultiThread.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MultiThread.mm; sourceTree = "<group>"; };
+		51B59C46280CF08500309267 /* LFU.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFU.h; sourceTree = "<group>"; };
 		CF06BF2F27E08301003185A6 /* LongestIncreasingSubsequence.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LongestIncreasingSubsequence.cpp; sourceTree = "<group>"; };
 		CF06BF3027E08301003185A6 /* LongestIncreasingSubsequence.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LongestIncreasingSubsequence.hpp; sourceTree = "<group>"; };
 		CF06DB1D27E0F414003185A6 /* MoveZeroes.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MoveZeroes.cpp; sourceTree = "<group>"; };
@@ -642,6 +643,7 @@
 				CFAECBCD27CCB8180037AC2E /* LFUCache.hpp */,
 				CFEBBE9D27E31C1B00BC86DF /* LRUCache.cpp */,
 				CFEBBE9E27E31C1B00BC86DF /* LRUCache.hpp */,
+				51B59C46280CF08500309267 /* LFU.h */,
 			);
 			path = Cache;
 			sourceTree = "<group>";

@@ -15,6 +15,8 @@
 {
     self = [super init];
     if (self) {
+        [self testForLC_Design];
+        
         [self testForLC_string];
         
         [self test_letterComb];
@@ -26,6 +28,57 @@
     }
     return self;
 }
+
+//MARK: - Design
+- (void)testForLC_Design {
+//    LFU::LFUCache *obj = new LFU::LFUCache(2);
+//
+//    obj->put(2,1);
+//    obj->put(1,1);
+//    obj->put(2,3);
+//    obj->put(4,1);
+//
+//    int param_1 = obj->get(1);
+//
+//    int param_2 = obj->get(2);
+//    NSLog(@"param_1:%d param_2:%d", param_1, param_2);
+    
+    
+//    ["LFUCache","put","put","get","put","get","get","put","get","get","get"]
+//    [[2],[1,1],[2,2],[1],[3,3],[2],[3],[4,4],[1],[3],[4]]
+    
+    LFU::LFUCache *obj = new LFU::LFUCache(2);
+    obj->put(1,1);
+    obj->put(2,2);
+    int param_1 = obj->get(1);
+    
+    obj->put(3, 3);
+    int param_2 = obj->get(2);
+    int param_3 = obj->get(3);
+
+    obj->put(4, 4);
+    int param_4 = obj->get(1);
+    int param_5 = obj->get(3);
+    int param_6 = obj->get(4);
+
+    obj->put(1,2);
+
+    NSLog(@"param_1:%d param_2:%d param_3:%d param_4:%d", param_1, param_2, param_3, param_4);
+    
+    
+//    LFU::LFUCache *obj = new LFU::LFUCache(2);
+//    int param_1 = obj->get(2);
+//    obj->put(2,6);
+//    int param_2 = obj->get(1);
+//    obj->put(1,5);
+//    obj->put(1,2);
+//    int param_3 = obj->get(1);
+//    int param_4 = obj->get(2);
+//
+//    NSLog(@"param_1:%d param_2:%d param_3:%d param_4:%d", param_1, param_2, param_3, param_4);
+    
+}
+
 
 //MARK: - Array
 - (void)testForLC_MeetingRooms2 {
