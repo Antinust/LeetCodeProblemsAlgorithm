@@ -16,32 +16,56 @@ namespace SortColors {
 
 class Solution {
 public:
-    void sortColors(vector<int>& nums) {
-        int zeroCnt = 0;
-        int oneCnt = 0;
-        int twoCnt = 0;
-        for (int i = 0; i < nums.size(); i++) {
-            if (nums[i] == 0) {
-                zeroCnt++;
-            } else if (nums[i] == 1) {
-                oneCnt++;
+    void sortColors(vector<int>& a) {
+        int len = a.size();
+        if (len < 2) {
+            return;
+        }
+        int zero = -1;
+        int two = len;
+        int i = 0;
+        while (i < two) {
+            if (a[i] == 0) {
+                swap(a[++zero], a[i]);
+                i++;
+            } else if (a[i] == 1) {
+                i++;
             } else {
-                twoCnt++;
+                swap(a[--two], a[i]);
             }
-        }
-        int index = 0;
-        for (; index < zeroCnt; index++) {
-            nums[index] = 0;
-        }
-        
-        for (; index < zeroCnt + oneCnt; index++) {
-            nums[index] = 1;
-        }
-        for (; index < nums.size(); index++) {
-            nums[index] = 2;
         }
     }
 };
+
+
+//class Solution {
+//public:
+//    void sortColors(vector<int>& nums) {
+//        int zeroCnt = 0;
+//        int oneCnt = 0;
+//        int twoCnt = 0;
+//        for (int i = 0; i < nums.size(); i++) {
+//            if (nums[i] == 0) {
+//                zeroCnt++;
+//            } else if (nums[i] == 1) {
+//                oneCnt++;
+//            } else {
+//                twoCnt++;
+//            }
+//        }
+//        int index = 0;
+//        for (; index < zeroCnt; index++) {
+//            nums[index] = 0;
+//        }
+//
+//        for (; index < zeroCnt + oneCnt; index++) {
+//            nums[index] = 1;
+//        }
+//        for (; index < nums.size(); index++) {
+//            nums[index] = 2;
+//        }
+//    }
+//};
 
 }
 

@@ -597,7 +597,7 @@
 				CFC2945827DC3DC300B78C2B /* Find */,
 				CFC2945127DB280000B78C2B /* List */,
 				CFC2942227D8819500B78C2B /* Sort */,
-				CFAECBFA27D340920037AC2E /* DFS&BFS */,
+				CFAECBFA27D340920037AC2E /* DFS_BFS */,
 				CFAECBF527D2047E0037AC2E /* Minimax */,
 				CFAECBCA27CCB7F40037AC2E /* Design */,
 				CFAECBBB27CC64050037AC2E /* percentile */,
@@ -672,7 +672,7 @@
 			path = Minimax;
 			sourceTree = "<group>";
 		};
-		CFAECBFA27D340920037AC2E /* DFS&BFS */ = {
+		CFAECBFA27D340920037AC2E /* DFS_BFS */ = {
 			isa = PBXGroup;
 			children = (
 				CFAE440123D31D6400B67A4F /* TargetSum.cpp */,
@@ -697,7 +697,7 @@
 				CFA1B3D827FFC76C0013D146 /* SerializeAndDeserializeBinaryTree.h */,
 				CFA1B3D9280080720013D146 /* RemoveInvalidParentheses.h */,
 			);
-			path = "DFS&BFS";
+			path = DFS_BFS;
 			sourceTree = "<group>";
 		};
 		CFAECC0A27D471AD0037AC2E /* TopologicalSort */ = {

@@ -27,6 +27,49 @@
  */
 namespace CourseSchedule {
 
+//MARK: - DFS
+class Solution {
+public:
+    bool isValid = true;
+    vector<vector<int>> edge;
+    vector<int> visited;
+
+    void dfs(int u) {
+        visited[u] = 1;
+        for (int v: edge[u]) {
+            if (visited[v] == 0) {
+                dfs(v);
+                if (!isValid) {
+                    return;
+                }
+            } else if (visited[v] == 1) {
+                isValid = false;
+                return;
+            }
+        }
+        if (!isValid) {
+            return;
+        }
+        visited[u] = 2; //以u为起始点的遍历 结束，不存在环，更改visited状态
+    }
+
+    bool canFinish(int numCourses, vector<vector<int>>& a) {
+        edge.resize(numCourses);
+        visited.resize(numCourses);
+        for (const auto &info : a) {
+            edge[info[1]].push_back(info[0]);
+        }
+
+        for (int i = 0; i < numCourses && isValid; i++) {
+            if (!visited[i]) {
+                dfs(i);
+            }
+        }
+        return isValid;
+    }
+};
+
+
 //class Solution {
 //    int V;    // No. of vertices
 //    list<int> *adj;    // Pointer to an array containing adjacency lists
@@ -104,7 +147,7 @@ namespace CourseSchedule {
     when pop a node,  mark visited[i]=1, decrease the degree of adjacent node. iterate until queue is empty.
  count the visited number;
  */
-class Solution {
+class Solution1 {
 //private:
     std::multimap<int, int> mMap;
     queue<int> mQ;
@@ -163,75 +206,5 @@ public:
         return visitedCourses >= numCourses;
     }
 };
-
-
-//MARK: - DFS
-
-//class Solution {
-////private:
-//    std::multimap<int, int> mMap;
-//
-//    bool visited[100001];
-//    bool recStack[100001];
-//    int cycleExist = 0;
-//public:
-//
-//    Solution() {
-//
-//    }
-//
-//    bool isCyclic(int index) {
-//        if (!mMap.count(index)) {
-//            return false;
-//        }
-//
-//        visited[index] = 1;
-//        recStack[index] = 1;
-//
-//        auto ret = mMap.equal_range(index);
-//        for (std::multimap<int,int>::iterator it=ret.first; it!=ret.second; ++it) {
-//            // 剪枝
-//            if (!visited[it->second] && isCyclic(it->second)) {
-//                return true;
-//            }
-//            if (recStack[it->second] == 1) {
-//                return true;
-//            }
-//        }
-//        recStack[index] = 0;
-//        return false;
-//    }
-//
-//    bool isCycleExist(int numCourses) {
-//        //这里遍历所有的节点，数量为numCourses
-//        for (int i = 0; i < numCourses; i++) {
-//            if (visited[i] == 0 && isCyclic(i)) {
-//                return true;
-//            }
-//        }
-//        return false;
-//    }
-//    bool canFinish(int numCourses, vector<vector<int> >& prerequisites) {
-//        memset(visited, 0, sizeof(visited));
-//        memset(recStack, 0, sizeof(recStack));
-//        mMap.clear();
-//
-//        int totalCnt = (int)prerequisites.size();
-//        // 这里遍历vector，数量为vec.size()
-//        for (int i = 0; i < totalCnt; i++) {
-//            int latter = prerequisites[i][0];
-//            int former = prerequisites[i][1];
-//            mMap.insert(std::make_pair(former,latter));
-//        }
-//        if (isCycleExist(numCourses)) {
-//            return false;
-//        }
-//        return true;
-//    }
-//};
-
-}
-
-
 
 #endif /* CourseSchedule_hpp */
