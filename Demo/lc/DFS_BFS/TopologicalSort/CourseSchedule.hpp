@@ -147,64 +147,65 @@ public:
     when pop a node,  mark visited[i]=1, decrease the degree of adjacent node. iterate until queue is empty.
  count the visited number;
  */
-class Solution1 {
-//private:
-    std::multimap<int, int> mMap;
-    queue<int> mQ;
-    bool visited[100001];
-    int indegree[100001];
-    int cycleExist = 0;
-public:
+//class Solution1 {
+////private:
+//    std::multimap<int, int> mMap;
+//    queue<int> mQ;
+//    bool visited[100001];
+//    int indegree[100001];
+//    int cycleExist = 0;
+//public:
+//
+//    Solution() {
+//    }
+//
+//    bool canFinish(int numCourses, vector<vector<int> >& prerequisites) {
+//        memset(visited, 1, sizeof(visited));
+//        memset(indegree, 0, sizeof(indegree));
+//        mMap.clear();
+//
+//        int totalCnt = (int)prerequisites.size();
+//        // 这里遍历vector，数量为vec.size()
+//        for (int i = 0; i < totalCnt; i++) {
+//            int latter = prerequisites[i][0];
+//            int former = prerequisites[i][1];
+//            visited[latter] = 0;
+//            visited[former] = 0;
+//            indegree[latter] ++;
+//            mMap.insert(std::make_pair(former,latter));
+//        }
+//
+//        for (int i = 0; i < numCourses; i++) {
+//            if (indegree[i] == 0 && visited[i] == 0) {
+//                mQ.push(i);
+//            }
+//        }
+//
+//        while (!mQ.empty()) {
+//            int i = mQ.front();
+//            if (visited[i] == 0) {
+//                auto ret = mMap.equal_range(i);
+//                for (std::multimap<int,int>::iterator it=ret.first; it!=ret.second; ++it) {
+//                    indegree[it->second]--;
+//                    if (indegree[it->second] == 0) {
+//                        mQ.push(it->second);
+//                    }
+//                }
+//                visited[i] = 1;
+//                mQ.pop();
+//            }
+//        }
+//
+//        int visitedCourses = 0;
+//        for (int i = 0; i < numCourses; i++) {
+//            if (visited[i] == 1) {
+//                visitedCourses++;
+//            }
+//        }
+//
+//        return visitedCourses >= numCourses;
+//    }
+//};
 
-    Solution() {
-    }
-    
-    bool canFinish(int numCourses, vector<vector<int> >& prerequisites) {
-        memset(visited, 1, sizeof(visited));
-        memset(indegree, 0, sizeof(indegree));
-        mMap.clear();
-
-        int totalCnt = (int)prerequisites.size();
-        // 这里遍历vector，数量为vec.size()
-        for (int i = 0; i < totalCnt; i++) {
-            int latter = prerequisites[i][0];
-            int former = prerequisites[i][1];
-            visited[latter] = 0;
-            visited[former] = 0;
-            indegree[latter] ++;
-            mMap.insert(std::make_pair(former,latter));
-        }
-        
-        for (int i = 0; i < numCourses; i++) {
-            if (indegree[i] == 0 && visited[i] == 0) {
-                mQ.push(i);
-            }
-        }
-        
-        while (!mQ.empty()) {
-            int i = mQ.front();
-            if (visited[i] == 0) {
-                auto ret = mMap.equal_range(i);
-                for (std::multimap<int,int>::iterator it=ret.first; it!=ret.second; ++it) {
-                    indegree[it->second]--;
-                    if (indegree[it->second] == 0) {
-                        mQ.push(it->second);
-                    }
-                }
-                visited[i] = 1;
-                mQ.pop();
-            }
-        }
-        
-        int visitedCourses = 0;
-        for (int i = 0; i < numCourses; i++) {
-            if (visited[i] == 1) {
-                visitedCourses++;
-            }
-        }
-        
-        return visitedCourses >= numCourses;
-    }
-};
-
+}
 #endif /* CourseSchedule_hpp */

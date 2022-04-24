@@ -26,5 +26,6 @@
 #import "MajorityElement.h"
 
 #import "LFU.h"
+#import "Singleton.h"
 
 #endif /* LCSolutionImpl_h */
