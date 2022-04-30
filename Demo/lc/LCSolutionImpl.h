@@ -28,5 +28,7 @@
 #import "LFU.h"
 #import "Singleton.h"
 #import "SingleNumber3.h"
-
+#import "LCString.h"
+#import "IntegerBreak.h"
+#import "StringCompression.h"
 #endif /* LCSolutionImpl_h */

@@ -228,6 +228,8 @@
 		CF8A55B528044EEE00AA3E7E /* AddTwoNumbers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddTwoNumbers.h; sourceTree = "<group>"; };
 		CF8A55B62805516200AA3E7E /* LongestPalindrome.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LongestPalindrome.h; sourceTree = "<group>"; };
 		CF8A55B7280560DF00AA3E7E /* ContainerWithMostWater.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContainerWithMostWater.h; sourceTree = "<group>"; };
+		CF949171281BEC9600363D38 /* IntegerBreak.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntegerBreak.h; sourceTree = "<group>"; };
+		CF949172281C1B4200363D38 /* StringCompression.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StringCompression.h; sourceTree = "<group>"; };
 		CF9E876C2806AB6E00996A6A /* UniquePaths.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UniquePaths.h; sourceTree = "<group>"; };
 		CF9E876E28090EF400996A6A /* MajorityElement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MajorityElement.h; sourceTree = "<group>"; };
 		CFA1B3D527FEF1070013D146 /* MeetingRooms2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeetingRooms2.h; sourceTree = "<group>"; };
@@ -569,6 +571,7 @@
 				CF3E94C027F957810058D5CF /* LongestCommonPrefix.hpp */,
 				51B59AB627FC6EFB00309267 /* DecodeString.h */,
 				CF3E94D527FE76560058D5CF /* WordBreak.h */,
+				CF949172281C1B4200363D38 /* StringCompression.h */,
 			);
 			path = String;
 			sourceTree = "<group>";
@@ -963,6 +966,7 @@
 				CFA1B3D727FF3BFA0013D146 /* BurstBalloons.h */,
 				CFA1B3DA280117010013D146 /* RegularExpressionMatching.h */,
 				CF8A55B62805516200AA3E7E /* LongestPalindrome.h */,
+				CF949171281BEC9600363D38 /* IntegerBreak.h */,
 			);
 			path = DynamicProgramming;
 			sourceTree = "<group>";

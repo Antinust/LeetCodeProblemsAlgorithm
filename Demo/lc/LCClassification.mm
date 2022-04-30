@@ -29,6 +29,7 @@
         
         [self test_BitOP];
 
+        [self testForLC_LCString];
     }
     return self;
 }
@@ -40,6 +41,14 @@
     so->singleNumber(a);
 }
 
+
+//MARK: - String
+- (void)testForLC_LCString {
+    LCString *str = [LCString new];
+    StringCompression::Solution *so = new StringCompression::Solution();
+    vector<char> a = {'7', '7', '2', '2'};
+    so->compress(a);
+}
 
 //MARK: - Design
 - (void)testForLC_Design {

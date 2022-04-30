@@ -38,7 +38,7 @@
 #import "LCClassification.h"
 #import "CPPTest.h"
 #import "OCTest.h"
-
+#include <iomanip>
 //#define f(a,b) a##b
 //#define g(a)   #a
 //#define h(a) g(a)
@@ -258,8 +258,44 @@ typedef struct bitTestStruct{
     OCTest *test = [OCTest new];
 }
 
+- (void)handleNotification:(id) sender{
+    NSLog(@"handleNotification");
+}
+
+- (void)testForLC_noti {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleNotification:) name:@"TestNotification" object:@1];
+}
+
+template< typename T >
+std::string int_to_hex( T i )
+{
+  std::stringstream stream;
+  stream << std::setfill ('0') << std::setw(sizeof(T)*2)
+         << std::hex << i;
+  return stream.str();
+}
+
+void test() {
+    char test_str[] = "115200";
+    int test_int_d;
+    sscanf(test_str, "%d", &test_int_d);
+    printf("int_to_hex:%s\r\n", int_to_hex(test_int_d).c_str());
+}
+
+void test2() {
+    char test_str[] = "124";
+    string str(test_str);
+    printf("str:%s\r\n", str.c_str());
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    test2();
+    
+    [self testForLC_noti];
+    
+    [NSNotificationCenter.defaultCenter postNotificationName:@"TestNotification" object:nil];
 
     [self testForOC];
 
