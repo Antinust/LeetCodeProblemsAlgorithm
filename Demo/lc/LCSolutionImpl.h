@@ -27,5 +27,6 @@
 
 #import "LFU.h"
 #import "Singleton.h"
+#import "SingleNumber3.h"
 
 #endif /* LCSolutionImpl_h */

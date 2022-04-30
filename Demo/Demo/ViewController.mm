@@ -37,6 +37,7 @@
 #import "LCPercentile.h"
 #import "LCClassification.h"
 #import "CPPTest.h"
+#import "OCTest.h"
 
 //#define f(a,b) a##b
 //#define g(a)   #a
@@ -251,8 +252,16 @@ typedef struct bitTestStruct{
     
 }
 
+//MARK: - OC
+//OCTest
+- (void)testForOC {
+    OCTest *test = [OCTest new];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    [self testForOC];
 
     [self testForLC_cpp];
     

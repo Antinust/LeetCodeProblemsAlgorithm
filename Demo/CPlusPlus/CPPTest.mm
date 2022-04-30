@@ -11,7 +11,9 @@
 
 @implementation CPPTest
 
-//using namespace CPPVirtualFuncTest;
+using namespace CPPVirtualFuncTest;
+
+typedef void (*PFunc)(void);
 
 - (instancetype)init
 {
@@ -34,9 +36,22 @@
 }
 
 void test_vfunc() {
-//    Derive1 d1;
-//    Derive1* pd1 = &d1;
+    C d1;
+    C* pd1 = &d1;
 //    pd1->d_vf2();
+    
+    auto virtualTableAddress = *(int64_t*)(pd1);
+    std::cout << "0x" << std::hex << virtualTableAddress << std::endl;
+
+//  https://blog.csdn.net/haoel/article/details/1948051
+//  https://blog.csdn.net/qianghaohao/article/details/51356718
+
+    for (int i = 0; i < 2; ++i){
+        auto address = *(int64_t*)(virtualTableAddress + 8 * i);
+        std::cout << "fun_" << i << " address: 0x" << std::hex << address << std::endl;
+        PFunc pf = (PFunc) address;
+        pf();
+    }
     
 //    A* pa = new A;
 //
@@ -78,14 +93,14 @@ struct D {
 
 int test_class_size()
 {
-    A ex1(4);
-    B ex2;
-    B *b1 = new B;
-    
-    cout << sizeof(ex1) << endl;    // 12 字节
-    cout << sizeof(ex2) << endl;    // 1 字节
-    cout << sizeof(*b1) << endl;    // 1 字节
-    cout << sizeof(D) << endl;      // 8 字节
+//    A ex1(4);
+//    B ex2;
+//    B *b1 = new B;
+//
+//    cout << sizeof(ex1) << endl;    // 12 字节
+//    cout << sizeof(ex2) << endl;    // 1 字节
+//    cout << sizeof(*b1) << endl;    // 1 字节
+//    cout << sizeof(D) << endl;      // 8 字节
 
     return 0;
 }

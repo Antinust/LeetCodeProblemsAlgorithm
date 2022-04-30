@@ -10,6 +10,8 @@
 		51B59AB227FC06BE00309267 /* LCClassification.mm in Sources */ = {isa = PBXBuildFile; fileRef = 51B59AB127FC06BE00309267 /* LCClassification.mm */; };
 		51B59C212801416800309267 /* CPPTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 51B59C202801416800309267 /* CPPTest.mm */; };
 		51B59C24280142CB00309267 /* MultiThread.mm in Sources */ = {isa = PBXBuildFile; fileRef = 51B59C23280142CB00309267 /* MultiThread.mm */; };
+		51B59F052816344E00309267 /* OCTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 51B59F022816344E00309267 /* OCTest.mm */; };
+		51B59F062816344E00309267 /* CopyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B59F032816344E00309267 /* CopyTest.m */; };
 		CF06BF3127E08301003185A6 /* LongestIncreasingSubsequence.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CF06BF2F27E08301003185A6 /* LongestIncreasingSubsequence.cpp */; };
 		CF06DB1F27E0F414003185A6 /* MoveZeroes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CF06DB1D27E0F414003185A6 /* MoveZeroes.cpp */; };
 		CF06DB2227E0F74A003185A6 /* LCArray.mm in Sources */ = {isa = PBXBuildFile; fileRef = CF06DB2127E0F74A003185A6 /* LCArray.mm */; };
@@ -147,6 +149,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		511D8D49281CCC8500C441E6 /* SingleNumber3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SingleNumber3.h; sourceTree = "<group>"; };
+		511D8D4A281CDF7900C441E6 /* SingleNumber2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SingleNumber2.h; sourceTree = "<group>"; };
+		511D8D4B281CEBA700C441E6 /* LargestPerimeter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LargestPerimeter.h; sourceTree = "<group>"; };
+		511D8D4C281D0F9800C441E6 /* MinimumSizeSubarraySum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MinimumSizeSubarraySum.h; sourceTree = "<group>"; };
+		511D8D4D281D27FA00C441E6 /* MaximumLengthOfRepeatedSubarray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaximumLengthOfRepeatedSubarray.h; sourceTree = "<group>"; };
+		511D8D4E281D36F700C441E6 /* PermutationInString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PermutationInString.h; sourceTree = "<group>"; };
+		511D8D4F281D58EF00C441E6 /* LongestRepeatingCharacterReplacement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LongestRepeatingCharacterReplacement.h; sourceTree = "<group>"; };
 		51B59AAE27FC01CA00309267 /* FindNumberOfLIS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FindNumberOfLIS.h; sourceTree = "<group>"; };
 		51B59AAF27FC024800309267 /* LCSolutionImpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCSolutionImpl.h; sourceTree = "<group>"; };
 		51B59AB027FC06BE00309267 /* LCClassification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCClassification.h; sourceTree = "<group>"; };
@@ -162,6 +171,10 @@
 		51B59C202801416800309267 /* CPPTest.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CPPTest.mm; sourceTree = "<group>"; };
 		51B59C23280142CB00309267 /* MultiThread.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MultiThread.mm; sourceTree = "<group>"; };
 		51B59C46280CF08500309267 /* LFU.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFU.h; sourceTree = "<group>"; };
+		51B59F012816344E00309267 /* OCTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTest.h; sourceTree = "<group>"; };
+		51B59F022816344E00309267 /* OCTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OCTest.mm; sourceTree = "<group>"; };
+		51B59F032816344E00309267 /* CopyTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CopyTest.m; sourceTree = "<group>"; };
+		51B59F042816344E00309267 /* CopyTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CopyTest.h; sourceTree = "<group>"; };
 		CF06BF2F27E08301003185A6 /* LongestIncreasingSubsequence.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LongestIncreasingSubsequence.cpp; sourceTree = "<group>"; };
 		CF06BF3027E08301003185A6 /* LongestIncreasingSubsequence.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LongestIncreasingSubsequence.hpp; sourceTree = "<group>"; };
 		CF06DB1D27E0F414003185A6 /* MoveZeroes.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MoveZeroes.cpp; sourceTree = "<group>"; };
@@ -442,6 +455,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		511D8D48281CCC3600C441E6 /* BitOperation */ = {
+			isa = PBXGroup;
+			children = (
+				511D8D49281CCC8500C441E6 /* SingleNumber3.h */,
+				511D8D4A281CDF7900C441E6 /* SingleNumber2.h */,
+			);
+			path = BitOperation;
+			sourceTree = "<group>";
+		};
 		51B59AB727FD1FC900309267 /* TradeStock */ = {
 			isa = PBXGroup;
 			children = (
@@ -461,9 +483,21 @@
 			path = MultiThread;
 			sourceTree = "<group>";
 		};
+		51B59F002816344E00309267 /* OC */ = {
+			isa = PBXGroup;
+			children = (
+				51B59F012816344E00309267 /* OCTest.h */,
+				51B59F022816344E00309267 /* OCTest.mm */,
+				51B59F032816344E00309267 /* CopyTest.m */,
+				51B59F042816344E00309267 /* CopyTest.h */,
+			);
+			path = OC;
+			sourceTree = "<group>";
+		};
 		CF3B347921F06E8E002473BF = {
 			isa = PBXGroup;
 			children = (
+				51B59F002816344E00309267 /* OC */,
 				CFA41EB1281255D300DB218C /* DesignPattern */,
 				CF8A55B428028FDD00AA3E7E /* net */,
 				51B59C222801420200309267 /* MultiThread */,
@@ -594,6 +628,7 @@
 		CFAE440023D31D4500B67A4F /* lc */ = {
 			isa = PBXGroup;
 			children = (
+				511D8D48281CCC3600C441E6 /* BitOperation */,
 				CFEBC1A327EC03C100BC86DF /* HashMap */,
 				CF3E94B827F9475A0058D5CF /* String */,
 				CFDDE7A927F536FD0060CE44 /* SlidingWindow */,
@@ -898,6 +933,7 @@
 				51B59AB527FC6A1500309267 /* RotateImage.h */,
 				CFA1B3D527FEF1070013D146 /* MeetingRooms2.h */,
 				CF8A55B528044EEE00AA3E7E /* AddTwoNumbers.h */,
+				511D8D4B281CEBA700C441E6 /* LargestPerimeter.h */,
 			);
 			path = Array;
 			sourceTree = "<group>";
@@ -996,6 +1032,10 @@
 				CFDDE7AB27F53AD80060CE44 /* LenOfLongestSubstrWithoutRepeatingChar.hpp */,
 				CFDDE7B027F5D25D0060CE44 /* MinimumWindowSubstring.cpp */,
 				CFDDE7B127F5D25D0060CE44 /* MinimumWindowSubstring.hpp */,
+				511D8D4C281D0F9800C441E6 /* MinimumSizeSubarraySum.h */,
+				511D8D4D281D27FA00C441E6 /* MaximumLengthOfRepeatedSubarray.h */,
+				511D8D4E281D36F700C441E6 /* PermutationInString.h */,
+				511D8D4F281D58EF00C441E6 /* LongestRepeatingCharacterReplacement.h */,
 			);
 			path = SlidingWindow;
 			sourceTree = "<group>";
@@ -1222,6 +1262,7 @@
 				CFDDE7BB27F82C2B0060CE44 /* EditDistance.cpp in Sources */,
 				CFDDE7AF27F5A0720060CE44 /* LongestValidParentheses.cpp in Sources */,
 				CFC2945B27DC3DCD00B78C2B /* FindTheDuplicateNumber.cpp in Sources */,
+				51B59F052816344E00309267 /* OCTest.mm in Sources */,
 				CFEBC19F27EADF6E00BC86DF /* SearchA2DMatrix2.cpp in Sources */,
 				CFC2945427DB281600B78C2B /* LinkedListCycle2.cpp in Sources */,
 				CFAECBFD27D3411D0037AC2E /* LowestCommonAncestor.cpp in Sources */,
@@ -1272,6 +1313,7 @@
 				51B59C212801416800309267 /* CPPTest.mm in Sources */,
 				CF4E2C6427D5E1B800A6C522 /* NumIslands.cpp in Sources */,
 				CFEBC18327E8326200BC86DF /* GenerateParentheses.cpp in Sources */,
+				51B59F062816344E00309267 /* CopyTest.m in Sources */,
 				CF06DB2227E0F74A003185A6 /* LCArray.mm in Sources */,
 				CF06DDBF27E170B3003185A6 /* LongestConsecutiveSequence.cpp in Sources */,
 				CFC2945027DB019E00B78C2B /* MinPathSum.cpp in Sources */,

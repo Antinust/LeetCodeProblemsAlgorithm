@@ -9,6 +9,7 @@
 #import "LCClassification.h"
 #import "LCSolutionImpl.h"
 
+
 @implementation LCClassification
 
 - (instancetype)init
@@ -25,9 +26,20 @@
         
         [self test_DP];
         [self testForLC_MeetingRooms2];
+        
+        [self test_BitOP];
+
     }
     return self;
 }
+
+//MARK: - BitOP
+- (void)test_BitOP {
+    SingleNumber3::Solution *so = new SingleNumber3::Solution();
+    vector<int> a = {1,1,0,-2147483648};
+    so->singleNumber(a);
+}
+
 
 //MARK: - Design
 - (void)testForLC_Design {
