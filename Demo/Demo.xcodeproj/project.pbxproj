@@ -156,6 +156,8 @@
 		511D8D4D281D27FA00C441E6 /* MaximumLengthOfRepeatedSubarray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaximumLengthOfRepeatedSubarray.h; sourceTree = "<group>"; };
 		511D8D4E281D36F700C441E6 /* PermutationInString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PermutationInString.h; sourceTree = "<group>"; };
 		511D8D4F281D58EF00C441E6 /* LongestRepeatingCharacterReplacement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LongestRepeatingCharacterReplacement.h; sourceTree = "<group>"; };
+		51AA82EA281E864A00D4EB69 /* MergeTwoSortedLists.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MergeTwoSortedLists.h; sourceTree = "<group>"; };
+		51AA82EB281EAC2400D4EB69 /* RemoveDuplicatesFromSortedList2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RemoveDuplicatesFromSortedList2.h; sourceTree = "<group>"; };
 		51B59AAE27FC01CA00309267 /* FindNumberOfLIS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FindNumberOfLIS.h; sourceTree = "<group>"; };
 		51B59AAF27FC024800309267 /* LCSolutionImpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCSolutionImpl.h; sourceTree = "<group>"; };
 		51B59AB027FC06BE00309267 /* LCClassification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCClassification.h; sourceTree = "<group>"; };
@@ -888,6 +890,8 @@
 				CFEBC16927E6B79000BC86DF /* PalindromeLinkedList.hpp */,
 				CFDDE7A327F3034F0060CE44 /* ReverseKGroup.cpp */,
 				CFDDE7A427F303500060CE44 /* ReverseKGroup.hpp */,
+				51AA82EA281E864A00D4EB69 /* MergeTwoSortedLists.h */,
+				51AA82EB281EAC2400D4EB69 /* RemoveDuplicatesFromSortedList2.h */,
 			);
 			path = List;
 			sourceTree = "<group>";
