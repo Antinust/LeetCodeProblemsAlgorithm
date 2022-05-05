@@ -288,19 +288,93 @@ void test2() {
     printf("str:%s\r\n", str.c_str());
 }
 
+int func(int x){
+    int countx = 0;
+
+    while(x) {
+        countx ++;
+        x = x&(x-1);
+    }
+    return countx;
+}
+
+int testReference(int &x) {
+    
+    int (* (*fp3() ) [10]) () ;
+    
+    int (* (*fp4())[10])();
+    char str1[] = "abc";
+    char str2[] = "abc";
+
+    const char str3[] = "abc";
+    const char str4[] = "abc";
+
+    const char *str5 = "abc";
+    const char *str6 = "abc";
+
+    char *str7 = "abc";
+    char *str8 = "abc";
+    printf("s1:%p s2:%p \r\n ", str1, str2);
+    cout << ( str1 == str2 ) << endl;//0  分别指向各自的栈内存
+    cout << ( str3 == str4 ) << endl;//0  分别指向各自的栈内存
+    cout << ( str5 == str6 ) << endl;//1指向文字常量区地址相同
+
+    cout << ( str7 == str8 ) << endl;//1指向文字常量区地址相同
+    
+    return 0;
+}
+
+- (void)test_block {
+    
+    __block int test = 0;
+    __weak void (^myBlock0)(void) = ^{   // stack
+        test++;
+    };
+    NSLog(@"block0:%@",myBlock0);
+
+    __block int temp = 10;
+    NSLog(@"block1: %@",^{NSLog(@"*******%d %p",temp++,&temp);}); // malloc
+    
+    NSLog(@"block2: %@",^{NSLog(@"******* test");});  // global
+    
+    __block int static_k = 3;
+    __weak void (^myBlock)(void) = ^{   // stack
+        static_k++;
+    };
+//    myBlock();
+    NSLog(@"block3:%@",myBlock);
+
+}
+
+
+- (void)test_add {
+    int a = INT_MIN;
+    int b = INT_MAX;
+    a = a ^ b;
+    b = a ^ b;
+    a = a ^ b;
+    printf("test_add %d %d \r\n", a, b);
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    test2();
+
+    [self test_add];
+    [self test_block];
+//    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+//        char dp[590 * 1024] = {0};
+//    });
     
+    [NSThread sleepForTimeInterval:0.2];
     [self testForLC_noti];
-    
+
     [NSNotificationCenter.defaultCenter postNotificationName:@"TestNotification" object:nil];
 
     [self testForOC];
 
     [self testForLC_cpp];
-    
+
     multimap<int, int> map;
     map.insert(make_pair(1, 1));
     map.insert(make_pair(1, 2));
@@ -308,6 +382,10 @@ void test2() {
     map.insert(make_pair(2, 1));
 
     [self testForLC_Entrance];
+    
+    
+    
+    
     
 //    std::time_t result = std::time(nullptr);
 //    NSLog(@"unix_ts:%s", std::asctime(std::localtime(&result)));

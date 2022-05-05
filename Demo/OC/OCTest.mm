@@ -38,9 +38,61 @@ typedef union UTest {
 
 @implementation OCTest
 
+- (void)startCountDown
+{
+
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        NSTimer* timer = [NSTimer timerWithTimeInterval:1 target:self selector:@selector(updateCountdownLabel:) userInfo:nil repeats:YES];
+        [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
+    });
+}
+
+- (void)updateCountdownLabel:(NSTimer*)timer
+{
+    static int cnt = 0;
+    NSLog(@"updateCountdownLabel_cnt:%d", ++cnt);
+    if(cnt >= 10)
+    {
+        dispatch_async(dispatch_get_global_queue(0, 0), ^{
+            [timer invalidate];
+        });
+    }
+}
+
+- (void)test_runloop {
+    NSLog(@"1");
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        NSLog(@"2");
+        [[NSRunLoop currentRunLoop] run];
+        [self performSelector:@selector(test) withObject:nil afterDelay:0.1];
+        NSLog(@"3");
+    });
+    NSLog(@"4");
+}
+
+- (void)test{
+    NSLog(@"5");
+}
+
+- (void)test_stackOverFlow {
+//    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+//        char dp[512 * 1024] = {0};
+//    });
+    
+}
+
+- (void)test_add {
+    int a=5, b;
+    b = (++a) + (++a);
+    printf("b:%d\r\n", b);
+}
+
 - (instancetype)init {
     self = [super init];
     if (self) {
+        [self test_add];
+        [self test_runloop];
+
         NSLog(@" class: %@", NSStringFromClass([self class]));
         NSLog(@" class: %@", NSStringFromClass([super class]));
         [self copyTest];
@@ -58,6 +110,8 @@ typedef union UTest {
         printf("p1:%d p2:%d \r\n", *(p1 + i), *(p2 + i));
     }
 }
+
+
 
 
 void Func(char str_arg[100])
