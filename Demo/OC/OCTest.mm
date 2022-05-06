@@ -8,7 +8,15 @@
 
 #import "OCTest.h"
 #import "CopyTest.h"
+#import <objc/runtime.h>
 
+@interface TGetClass : NSObject
+
+@end
+
+@implementation TGetClass
+
+@end
 
 
 @implementation OCBase
@@ -29,10 +37,13 @@ typedef union UTest {
     } b;
 };
 
+
+
 @interface OCTest () {
     NSString *_foo;
-//    NSString *foo;
+//    NSString *foo
 }
+@property int num;
 
 @end
 
@@ -87,10 +98,86 @@ typedef union UTest {
     printf("b:%d\r\n", b);
 }
 
+- (void)test_gcd {
+    while (self.num < 5) {
+        dispatch_async(dispatch_get_global_queue(0, 0), ^{
+            NSLog(@"num_%d thread_id:%p", self.num, [NSThread currentThread]);
+            self.num++;
+        });
+    }
+    NSLog(@"num:%d", self.num);
+}
+
+- (void)test_gcd2 {
+    for (int i = 0; i < 10000; i++) {
+        dispatch_async(dispatch_get_global_queue(0, 0), ^{
+            NSLog(@"num_%d thread_id:%p", self.num, [NSThread currentThread]);
+            self.num++;
+        });
+    }
+//    while (self.num < 5) {
+//        dispatch_async(dispatch_get_global_queue(0, 0), ^{
+//            NSLog(@"num_%d thread_id:%p", self.num, [NSThread currentThread]);
+//            self.num++;
+//        });
+//    }
+    NSLog(@"num:%d", self.num);
+}
+
+- (void)test_getClass {
+    /*
+     1. object_getClass 返回的是对象(传入参数) 属于哪个类
+     2. objc_getClass  返回的是类对象，The Class object for the named class
+     */
+    TGetClass *obj = [TGetClass new];
+    
+//    objc_getClass()、object_getClass()、Class
+    
+    // test Class
+//    NSLog(@"class_obj0:%p", [obj class]);
+
+    NSLog(@" ");
+
+    // test objc_getClass
+    NSLog(@"class_obj1:%@", obj);
+    NSLog(@"class_obj1:%@", [obj class]);
+    
+    NSLog(@" ");
+
+    NSLog(@"class_obj1_2:%@", self);
+//    NSLog(@"class_obj1_2:%p", super);
+    NSLog(@"class_obj1_2:%@", [self class]);
+    NSLog(@"class_obj1_2:%@", [super class]);
+    
+    NSLog(@" ");
+
+    NSLog(@"class_obj1_3:%p", objc_getClass(object_getClassName(obj) ));
+    NSLog(@"class_obj1_4:%p", objc_getClass(object_getClassName([obj class] ) ));
+
+    NSLog(@" ");
+
+    
+    // test object_getClass
+    NSLog(@"class_obj3_1:%p", object_getClass(obj));                            // 对象的isa 指向类 ： 类地址
+    NSLog(@"class_obj3_2:%p", object_getClass([obj class]) );                   // 类的isa 指向元类 ： 元类地址
+    
+    NSLog(@"class_obj3_3:%p", object_getClass( object_getClass([obj class]) )); // 元类的isa 指向根元类 ： 根元类地址
+    NSLog(@"class_obj3_4:%p", object_getClass([NSObject class]));                   // NSObject类的isa 指向根元类 ： 根元类地址
+    NSLog(@"class_obj3_5:%p", object_getClass( object_getClass([NSObject class])) ); // 根元类的isa 指向根元类 ： 根元类地址
+
+    NSLog(@" ");
+
+
+}
+
+
 - (instancetype)init {
     self = [super init];
     if (self) {
-        [self test_add];
+//        [self test_gcd];
+//        [self test_gcd2];
+
+        [self test_getClass];
         [self test_runloop];
 
         NSLog(@" class: %@", NSStringFromClass([self class]));

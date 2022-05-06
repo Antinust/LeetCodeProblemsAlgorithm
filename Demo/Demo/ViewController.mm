@@ -366,7 +366,7 @@ int testReference(int &x) {
 //        char dp[590 * 1024] = {0};
 //    });
     
-    [NSThread sleepForTimeInterval:0.2];
+//    [NSThread sleepForTimeInterval:0.2];
     [self testForLC_noti];
 
     [NSNotificationCenter.defaultCenter postNotificationName:@"TestNotification" object:nil];
