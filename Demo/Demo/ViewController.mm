@@ -256,6 +256,7 @@ typedef struct bitTestStruct{
 //OCTest
 - (void)testForOC {
     OCTest *test = [OCTest new];
+//    [OCTest printClassName];
 }
 
 - (void)handleNotification:(id) sender{

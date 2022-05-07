@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51AA9328282668EB00D4EB69 /* OCTest+CategoryA.m in Sources */ = {isa = PBXBuildFile; fileRef = 51AA9327282668EA00D4EB69 /* OCTest+CategoryA.m */; };
+		51AA932B282668F700D4EB69 /* OCTest+CategoryB.m in Sources */ = {isa = PBXBuildFile; fileRef = 51AA932A282668F600D4EB69 /* OCTest+CategoryB.m */; };
 		51B59AB227FC06BE00309267 /* LCClassification.mm in Sources */ = {isa = PBXBuildFile; fileRef = 51B59AB127FC06BE00309267 /* LCClassification.mm */; };
 		51B59C212801416800309267 /* CPPTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 51B59C202801416800309267 /* CPPTest.mm */; };
 		51B59C24280142CB00309267 /* MultiThread.mm in Sources */ = {isa = PBXBuildFile; fileRef = 51B59C23280142CB00309267 /* MultiThread.mm */; };
@@ -158,6 +160,10 @@
 		511D8D4F281D58EF00C441E6 /* LongestRepeatingCharacterReplacement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LongestRepeatingCharacterReplacement.h; sourceTree = "<group>"; };
 		51AA82EA281E864A00D4EB69 /* MergeTwoSortedLists.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MergeTwoSortedLists.h; sourceTree = "<group>"; };
 		51AA82EB281EAC2400D4EB69 /* RemoveDuplicatesFromSortedList2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RemoveDuplicatesFromSortedList2.h; sourceTree = "<group>"; };
+		51AA9326282668EA00D4EB69 /* OCTest+CategoryA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OCTest+CategoryA.h"; sourceTree = "<group>"; };
+		51AA9327282668EA00D4EB69 /* OCTest+CategoryA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "OCTest+CategoryA.m"; sourceTree = "<group>"; };
+		51AA9329282668F600D4EB69 /* OCTest+CategoryB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OCTest+CategoryB.h"; sourceTree = "<group>"; };
+		51AA932A282668F600D4EB69 /* OCTest+CategoryB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "OCTest+CategoryB.m"; sourceTree = "<group>"; };
 		51B59AAE27FC01CA00309267 /* FindNumberOfLIS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FindNumberOfLIS.h; sourceTree = "<group>"; };
 		51B59AAF27FC024800309267 /* LCSolutionImpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCSolutionImpl.h; sourceTree = "<group>"; };
 		51B59AB027FC06BE00309267 /* LCClassification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCClassification.h; sourceTree = "<group>"; };
@@ -490,10 +496,14 @@
 		51B59F002816344E00309267 /* OC */ = {
 			isa = PBXGroup;
 			children = (
+				51B59F042816344E00309267 /* CopyTest.h */,
+				51B59F032816344E00309267 /* CopyTest.m */,
 				51B59F012816344E00309267 /* OCTest.h */,
 				51B59F022816344E00309267 /* OCTest.mm */,
-				51B59F032816344E00309267 /* CopyTest.m */,
-				51B59F042816344E00309267 /* CopyTest.h */,
+				51AA9326282668EA00D4EB69 /* OCTest+CategoryA.h */,
+				51AA9327282668EA00D4EB69 /* OCTest+CategoryA.m */,
+				51AA9329282668F600D4EB69 /* OCTest+CategoryB.h */,
+				51AA932A282668F600D4EB69 /* OCTest+CategoryB.m */,
 			);
 			path = OC;
 			sourceTree = "<group>";
@@ -1243,6 +1253,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51AA9328282668EB00D4EB69 /* OCTest+CategoryA.m in Sources */,
+				51AA932B282668F700D4EB69 /* OCTest+CategoryB.m in Sources */,
 				CFC2947827DED0DE00B78C2B /* LCDP.mm in Sources */,
 				CFAE440323D31D6400B67A4F /* TargetSum.cpp in Sources */,
 				CFEBBE9927E2CA5200BC86DF /* CoinChange.cpp in Sources */,

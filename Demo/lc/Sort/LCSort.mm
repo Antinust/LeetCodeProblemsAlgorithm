@@ -23,6 +23,21 @@
     }
     return self;
 }
+//MARK: - QuickSort
+void qSort(vector<int> & a) {
+    int len = a.size();
+    int i = -1;
+    int j = 0;
+    int pivotIndex = len - 1;
+    
+    while (j < pivotIndex) {
+        if (a[j] < a[pivotIndex]) {
+            swap(a[++i], a[j]);
+        }
+        j++;
+    }
+    swap(a[i + 1], a[pivotIndex]);
+}
 
 - (void)testForSortedArray {
     SearchInRotatedSortedArray::Solution *sol = new SearchInRotatedSortedArray::Solution();

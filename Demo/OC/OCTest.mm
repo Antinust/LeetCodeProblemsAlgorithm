@@ -20,6 +20,14 @@
 
 
 @implementation OCBase
++ (void)load {
+    NSLog(@"%s %@", __func__, self);
+}
+
++ (void)initialize {
+    NSLog(@"%s %@", __func__, self);
+}
+
 @end
 
 typedef union UTest {
@@ -48,6 +56,18 @@ typedef union UTest {
 @end
 
 @implementation OCTest
+
++ (void)printClassName {
+    NSLog(@"%s %s", __func__, object_getClassName(self));
+}
+
++ (void)load {
+    NSLog(@"%s %@", __func__, self);
+}
+
++ (void)initialize {
+    NSLog(@"%s %@", __func__, self);
+}
 
 - (void)startCountDown
 {
@@ -139,15 +159,15 @@ typedef union UTest {
     NSLog(@" ");
 
     // test objc_getClass
-    NSLog(@"class_obj1:%@", obj);
-    NSLog(@"class_obj1:%@", [obj class]);
+    NSLog(@"class_obj1:%p", obj);
+    NSLog(@"class_obj1_2:%p", [obj class]);
     
     NSLog(@" ");
 
-    NSLog(@"class_obj1_2:%@", self);
+//    NSLog(@"class_obj1_2:%@", self);
 //    NSLog(@"class_obj1_2:%p", super);
-    NSLog(@"class_obj1_2:%@", [self class]);
-    NSLog(@"class_obj1_2:%@", [super class]);
+//    NSLog(@"class_obj1_2:%@", [self class]);
+//    NSLog(@"class_obj1_2:%@", [super class]);
     
     NSLog(@" ");
 
