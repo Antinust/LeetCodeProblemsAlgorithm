@@ -67,6 +67,28 @@ public:
 //    }
 //};
 
+//[1,2,0]
+//[2,0,2,1,1,0]
+class Solution2 {
+public:
+    void sortColors(vector<int>& a) {
+        int len = a.size();
+        int zeroIndex = -1;
+        int twoIndex = len;
+        int index = 0;
+        while (index < twoIndex) {
+            if (a[index] == 2) {
+                swap(a[--twoIndex], a[index]);
+            } else if (a[index] == 0) {
+                swap(a[++zeroIndex], a[index]);
+                index++;
+            } else {
+                index++;
+            }
+        }
+    }
+};
+
 }
 
 

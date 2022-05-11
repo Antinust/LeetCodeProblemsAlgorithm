@@ -20,6 +20,7 @@
     self = [super init];
     if (self) {
         [self testForLC];
+        [self test_BinarySearch];
     }
     return self;
 }
@@ -37,6 +38,29 @@ void qSort(vector<int> & a) {
         j++;
     }
     swap(a[i + 1], a[pivotIndex]);
+}
+
+//MARK: - BinarySearch
+- (void)test_BinarySearch {
+    printf("test_BinarySearch: %.1f \r\n", mySqrt(14.66));
+}
+
+const float step = 0.001;
+const float ZERO = 0.0001;
+
+float mySqrt(float n) {
+    float left = 0;
+    float right = n;
+    float mid = (left + right) / 2;
+    while (left < right) { // fabs(left - right) > step
+        mid = (left + right) / 2;
+        if (mid * mid < n) {
+            left = mid + step;
+        } else {
+            right = mid - step;
+        }
+    }
+    return mid;
 }
 
 - (void)testForSortedArray {

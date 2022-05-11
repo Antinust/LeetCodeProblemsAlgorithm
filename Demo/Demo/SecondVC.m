@@ -8,7 +8,13 @@
 
 #import "SecondVC.h"
 
+typedef void(^MyBlock)(void);
+
 @interface SecondVC ()
+
+@property int testval; //(nonatomic, assign)
+
+@property MyBlock mblock;
 
 @end
 
@@ -18,20 +24,34 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    
+//    [self testNotifications];
+//    [self addNotifications];
+    self.mblock = ^(void) {
+        NSLog(@"testval:%d", self.testval);
+        return;
+    };
    
 }
 
 - (void) viewWillAppear:(BOOL)animated{
-    [self addNotifications];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"test" object:nil];
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [self addNotifications];
 }
 
+- (void)testNotifications {
+//    NSNotificationCenter addObserverForName:object:queue:usingBlock
+    [[NSNotificationCenter defaultCenter] addObserverForName:@"test" object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull note) {
+        NSLog(@"testNotifications:%d", self.testval);
+    }];
+    
+}
+
 - (void)addNotifications {
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notificationOccurred) name:@"NotiTest" object:nil];
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notificationOccurred) name:@"NotiTest" object:nil];
 }
 
 - (void)notificationOccurred {
@@ -40,7 +60,8 @@
 }
 
 - (void)dealloc {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    NSLog(@"dealloc_SecondVC");
+//    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 /*

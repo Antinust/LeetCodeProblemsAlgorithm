@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		51AA9328282668EB00D4EB69 /* OCTest+CategoryA.m in Sources */ = {isa = PBXBuildFile; fileRef = 51AA9327282668EA00D4EB69 /* OCTest+CategoryA.m */; };
 		51AA932B282668F700D4EB69 /* OCTest+CategoryB.m in Sources */ = {isa = PBXBuildFile; fileRef = 51AA932A282668F600D4EB69 /* OCTest+CategoryB.m */; };
+		51AA987B282A64F100D4EB69 /* NSThreadTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 51AA987A282A64F100D4EB69 /* NSThreadTest.m */; };
 		51B59AB227FC06BE00309267 /* LCClassification.mm in Sources */ = {isa = PBXBuildFile; fileRef = 51B59AB127FC06BE00309267 /* LCClassification.mm */; };
 		51B59C212801416800309267 /* CPPTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 51B59C202801416800309267 /* CPPTest.mm */; };
 		51B59C24280142CB00309267 /* MultiThread.mm in Sources */ = {isa = PBXBuildFile; fileRef = 51B59C23280142CB00309267 /* MultiThread.mm */; };
@@ -164,6 +165,9 @@
 		51AA9327282668EA00D4EB69 /* OCTest+CategoryA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "OCTest+CategoryA.m"; sourceTree = "<group>"; };
 		51AA9329282668F600D4EB69 /* OCTest+CategoryB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OCTest+CategoryB.h"; sourceTree = "<group>"; };
 		51AA932A282668F600D4EB69 /* OCTest+CategoryB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "OCTest+CategoryB.m"; sourceTree = "<group>"; };
+		51AA9879282A64F100D4EB69 /* NSThreadTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSThreadTest.h; sourceTree = "<group>"; };
+		51AA987A282A64F100D4EB69 /* NSThreadTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSThreadTest.m; sourceTree = "<group>"; };
+		51AA987D282B64A800D4EB69 /* LastRemainingInCircle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LastRemainingInCircle.h; sourceTree = "<group>"; };
 		51B59AAE27FC01CA00309267 /* FindNumberOfLIS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FindNumberOfLIS.h; sourceTree = "<group>"; };
 		51B59AAF27FC024800309267 /* LCSolutionImpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCSolutionImpl.h; sourceTree = "<group>"; };
 		51B59AB027FC06BE00309267 /* LCClassification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCClassification.h; sourceTree = "<group>"; };
@@ -474,6 +478,14 @@
 			path = BitOperation;
 			sourceTree = "<group>";
 		};
+		51AA987C282B645F00D4EB69 /* Recursion */ = {
+			isa = PBXGroup;
+			children = (
+				51AA987D282B64A800D4EB69 /* LastRemainingInCircle.h */,
+			);
+			path = Recursion;
+			sourceTree = "<group>";
+		};
 		51B59AB727FD1FC900309267 /* TradeStock */ = {
 			isa = PBXGroup;
 			children = (
@@ -489,6 +501,8 @@
 				CF2EB08E23C07581007FFA14 /* MultiThread.h */,
 				CF2EB09123C094F1007FFA14 /* H2O.cpp */,
 				CF2EB09223C094F1007FFA14 /* H2O.hpp */,
+				51AA9879282A64F100D4EB69 /* NSThreadTest.h */,
+				51AA987A282A64F100D4EB69 /* NSThreadTest.m */,
 			);
 			path = MultiThread;
 			sourceTree = "<group>";
@@ -958,6 +972,7 @@
 		CFC2947527DED0AD00B78C2B /* DynamicProgramming */ = {
 			isa = PBXGroup;
 			children = (
+				51AA987C282B645F00D4EB69 /* Recursion */,
 				51B59AB727FD1FC900309267 /* TradeStock */,
 				CFDDE76A27ED54770060CE44 /* backpack */,
 				CF06BF2F27E08301003185A6 /* LongestIncreasingSubsequence.cpp */,
@@ -1295,6 +1310,7 @@
 				CFDDE76D27ED54C00060CE44 /* PerfectSquares.cpp in Sources */,
 				CFEBBE9F27E31C1B00BC86DF /* LRUCache.cpp in Sources */,
 				CFC2948727DF446A00B78C2B /* LCList.mm in Sources */,
+				51AA987B282A64F100D4EB69 /* NSThreadTest.m in Sources */,
 				CFEBC16A27E6B79000BC86DF /* PalindromeLinkedList.cpp in Sources */,
 				CFEBC18627E85B1900BC86DF /* BuildTreeFromPreInorder.cpp in Sources */,
 				CFAECC0627D35A4E0037AC2E /* KthSmallestInBST.cpp in Sources */,

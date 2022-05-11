@@ -39,6 +39,8 @@
 #import "CPPTest.h"
 #import "OCTest.h"
 #include <iomanip>
+#import "NSThreadTest.h"
+
 //#define f(a,b) a##b
 //#define g(a)   #a
 //#define h(a) g(a)
@@ -442,6 +444,7 @@ int testReference(int &x) {
 //    _thread = [[NSThread alloc] initWithTarget:self selector:@selector(threadTest) object:nil];
 //    [_thread start];
 
+    [self threadTest];
 }
 
 - (void)test_trie {
@@ -463,6 +466,8 @@ int testReference(int &x) {
 
 
 - (void)threadTest{
+    NSThreadTest * test = [NSThreadTest sharedInstance];
+    
     int i = 0;
 //    while (true) {
 //        NSLog(@"loop:%d",i);
@@ -544,7 +549,7 @@ bool  is_ipv6_address(const char* str)
         [[NSNotificationCenter defaultCenter] postNotificationName:@"NotiTest" object:nil];
     });
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.25 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self.navigationController popViewControllerAnimated:NO];
     });
 }
