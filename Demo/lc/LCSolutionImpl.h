@@ -31,4 +31,5 @@
 #import "LCString.h"
 #import "IntegerBreak.h"
 #import "StringCompression.h"
+#import "IntegerReversion.h"
 #endif /* LCSolutionImpl_h */

@@ -168,6 +168,7 @@
 		51AA9879282A64F100D4EB69 /* NSThreadTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSThreadTest.h; sourceTree = "<group>"; };
 		51AA987A282A64F100D4EB69 /* NSThreadTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSThreadTest.m; sourceTree = "<group>"; };
 		51AA987D282B64A800D4EB69 /* LastRemainingInCircle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LastRemainingInCircle.h; sourceTree = "<group>"; };
+		51AA987E282B74C800D4EB69 /* IntegerReversion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntegerReversion.h; sourceTree = "<group>"; };
 		51B59AAE27FC01CA00309267 /* FindNumberOfLIS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FindNumberOfLIS.h; sourceTree = "<group>"; };
 		51B59AAF27FC024800309267 /* LCSolutionImpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCSolutionImpl.h; sourceTree = "<group>"; };
 		51B59AB027FC06BE00309267 /* LCClassification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCClassification.h; sourceTree = "<group>"; };
@@ -965,6 +966,7 @@
 				CFA1B3D527FEF1070013D146 /* MeetingRooms2.h */,
 				CF8A55B528044EEE00AA3E7E /* AddTwoNumbers.h */,
 				511D8D4B281CEBA700C441E6 /* LargestPerimeter.h */,
+				51AA987E282B74C800D4EB69 /* IntegerReversion.h */,
 			);
 			path = Array;
 			sourceTree = "<group>";
