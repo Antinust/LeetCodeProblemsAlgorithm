@@ -7,6 +7,7 @@
 //
 
 #import "NSThreadTest.h"
+#import <UIKit/UIKit.h>
 
 @interface NSThreadTest () {
     
@@ -14,6 +15,7 @@
 
 @property NSThread *mThread;
 @property bool keepRunning;
+@property dispatch_queue_t queue;
 @end
 
 @implementation NSThreadTest
@@ -23,6 +25,11 @@
     self = [super init];
     if (self) {
         _keepRunning = true;
+        [self testGCD_once];
+        [self testDispatchMain];
+        [self testMainQueueAndMainThread];
+        [self asyncAndGlobalQueue];
+        _queue = dispatch_queue_create("gcd_test_serial_q", DISPATCH_QUEUE_SERIAL);
         dispatch_async(dispatch_get_global_queue(0, 0), ^{
             [self initThread];
         });
@@ -38,6 +45,101 @@
         instance = [[NSThreadTest alloc] init];
     });
     return instance;
+}
+
+//MARK: - test GCD
+- (void)testGCD_once {
+    NSLog(@"once:%lu %lu", ((uintptr_t)0), (~(uintptr_t)0));
+    NSLog(@"test");
+}
+
+- (void)testGCD_serialQueue {
+    NSLog(@"1");
+    dispatch_async(self.queue, ^{
+        NSLog(@"2");
+        dispatch_sync(self.queue, ^{
+            NSLog(@"3");
+        });
+        NSLog(@"4");
+    });
+    NSLog(@"5");
+}
+
+- (void)asyncAndGlobalQueue {
+    NSLog(@"begin --- main:%d",[NSThread isMainThread]);
+    
+    dispatch_queue_t globalQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    for (NSInteger index = 0; index < 10 ;index ++) {
+        //dispatch_sync，本应该让block里面的内容在globalQueue执行的，却在主线程执行了
+        dispatch_sync(globalQueue, ^{
+            NSLog(@"index:%ld --- %@ main:%d", index, [NSThread currentThread], [NSThread isMainThread]);
+        });
+    }
+    NSLog(@"end --- main:%d",[NSThread isMainThread]);
+}
+
+- (void)testMainQueueAndMainThread {
+    // dispatch_queue_t queue = dispatch_queue_create(dispatch_queue_get_label(dispatch_get_main_queue()), nil);  //这种方式会导致label相同
+    dispatch_queue_t queue = dispatch_queue_create("com.apple.main-thread", nil);
+    NSLog(@"main_q:%s", dispatch_queue_get_label(dispatch_get_main_queue()));
+    
+    dispatch_sync(queue, ^{
+        // 当前代码,在主线程,而不在主队列
+        NSLog(@"isMainThread:%d isMainQ:%d", [NSThread isMainThread], dispatch_queue_get_label(DISPATCH_CURRENT_QUEUE_LABEL) == dispatch_queue_get_label(dispatch_get_main_queue()));
+//        if ([NSThread isMainThread]) {
+//            [self addRedView]; // 执行这行, 会崩溃
+//        } else {
+//            dispatch_async(dispatch_get_main_queue(), ^{
+//                [self addRedView];
+//            });
+//        }
+ 
+        if (dispatch_queue_get_label(DISPATCH_CURRENT_QUEUE_LABEL) == dispatch_queue_get_label(dispatch_get_main_queue())) {
+            [self addRedView];
+        } else {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self addRedView]; // 执行这行, 不会崩溃
+            });
+        }
+ 
+    });
+ 
+}
+// 假设这个方法是系统的某个方法, 要求必须在主线程 && 必须是主队列, 否则触发crash
+- (void)addRedView {
+ 
+    if ([NSThread isMainThread]) {
+ 
+    } else {
+        NSLog(@"不是主线程");
+        NSAssert(NO, @"不是主线程");
+    }
+    if (dispatch_queue_get_label(DISPATCH_CURRENT_QUEUE_LABEL) == dispatch_queue_get_label(dispatch_get_main_queue())) {
+ 
+    } else {
+        NSLog(@"不是主队列");
+        NSAssert(NO, @"不是主队列");
+    }
+    UIView *redView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 40)];
+    redView.backgroundColor = [UIColor redColor];
+//    [self.view addSubview:redView];
+}
+
+- (void)testDispatchMain {
+    //异步加入到全局并发队列中
+     dispatch_async(dispatch_get_global_queue(0, 0), ^{
+    //异步加入到主队列中
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSLog(@"main thread: %d", [NSThread isMainThread]);
+            NSLog(@"%@",[NSThread currentThread]);
+            // 判断是否是主队列
+//            void *value = dispatch_get_specific(key);//返回与当前分派队列关联的键的值。
+            NSLog(@"main queue: %d", dispatch_queue_get_label(DISPATCH_CURRENT_QUEUE_LABEL) == dispatch_queue_get_label(dispatch_get_main_queue()));
+        });
+    });
+    NSLog(@"dispatch_main会堵塞主线程");
+//    dispatch_main();
+    NSLog(@"查看是否堵塞主线程");
 }
 
 - (void)repeat {
@@ -63,6 +165,7 @@
 - (void)stopRunning {
     
 }
+
 
 //MARK: - AFN2.0
 + (NSThread *)networkRequestThread {
