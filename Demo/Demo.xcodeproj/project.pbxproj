@@ -27,7 +27,7 @@
 		CF3B348D21F06E8E002473BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF3B348B21F06E8E002473BF /* Main.storyboard */; };
 		CF3B348F21F06E8F002473BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF3B348E21F06E8F002473BF /* Assets.xcassets */; };
 		CF3B349221F06E8F002473BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF3B349021F06E8F002473BF /* LaunchScreen.storyboard */; };
-		CF3B349521F06E8F002473BF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF3B349421F06E8F002473BF /* main.m */; };
+		CF3B349521F06E8F002473BF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF3B349421F06E8F002473BF /* main.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CF3B349F21F06E8F002473BF /* DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF3B349E21F06E8F002473BF /* DemoTests.m */; };
 		CF3B34AA21F06E8F002473BF /* DemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF3B34A921F06E8F002473BF /* DemoUITests.m */; };
 		CF3E94BB27F9476F0058D5CF /* LCString.mm in Sources */ = {isa = PBXBuildFile; fileRef = CF3E94BA27F9476F0058D5CF /* LCString.mm */; };
@@ -37,6 +37,7 @@
 		CF4E2C6127D5047800A6C522 /* BTLevelOrderTraversal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CF4E2C5F27D5047800A6C522 /* BTLevelOrderTraversal.cpp */; };
 		CF4E2C6427D5E1B800A6C522 /* NumIslands.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CF4E2C6227D5E1B800A6C522 /* NumIslands.cpp */; };
 		CF6A4025225EE4AB002CC554 /* DuMediaABTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6A4024225EE4AB002CC554 /* DuMediaABTest.m */; };
+		CF8F2DDF2833B10C005829D0 /* OCMemory.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8F2DDE2833B10C005829D0 /* OCMemory.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CFAE440323D31D6400B67A4F /* TargetSum.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFAE440123D31D6400B67A4F /* TargetSum.cpp */; };
 		CFAECBBE27CC64380037AC2E /* FindMedian.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFAECBBC27CC64380037AC2E /* FindMedian.cpp */; };
 		CFAECBCE27CCB8180037AC2E /* LFUCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFAECBCC27CCB8180037AC2E /* LFUCache.cpp */; };
@@ -241,6 +242,8 @@
 		CF8A55B528044EEE00AA3E7E /* AddTwoNumbers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddTwoNumbers.h; sourceTree = "<group>"; };
 		CF8A55B62805516200AA3E7E /* LongestPalindrome.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LongestPalindrome.h; sourceTree = "<group>"; };
 		CF8A55B7280560DF00AA3E7E /* ContainerWithMostWater.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContainerWithMostWater.h; sourceTree = "<group>"; };
+		CF8F2DDD2833B10C005829D0 /* OCMemory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCMemory.h; sourceTree = "<group>"; };
+		CF8F2DDE2833B10C005829D0 /* OCMemory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCMemory.m; sourceTree = "<group>"; };
 		CF949171281BEC9600363D38 /* IntegerBreak.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntegerBreak.h; sourceTree = "<group>"; };
 		CF949172281C1B4200363D38 /* StringCompression.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StringCompression.h; sourceTree = "<group>"; };
 		CF9E876C2806AB6E00996A6A /* UniquePaths.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UniquePaths.h; sourceTree = "<group>"; };
@@ -508,9 +511,10 @@
 			path = MultiThread;
 			sourceTree = "<group>";
 		};
-		51B59F002816344E00309267 /* OC */ = {
+		51B59F002816344E00309267 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				CF8F2DDC2833B0BC005829D0 /* Memory */,
 				51B59F042816344E00309267 /* CopyTest.h */,
 				51B59F032816344E00309267 /* CopyTest.m */,
 				51B59F012816344E00309267 /* OCTest.h */,
@@ -520,13 +524,13 @@
 				51AA9329282668F600D4EB69 /* OCTest+CategoryB.h */,
 				51AA932A282668F600D4EB69 /* OCTest+CategoryB.m */,
 			);
-			path = OC;
+			path = iOS;
 			sourceTree = "<group>";
 		};
 		CF3B347921F06E8E002473BF = {
 			isa = PBXGroup;
 			children = (
-				51B59F002816344E00309267 /* OC */,
+				51B59F002816344E00309267 /* iOS */,
 				CFA41EB1281255D300DB218C /* DesignPattern */,
 				CF8A55B428028FDD00AA3E7E /* net */,
 				51B59C222801420200309267 /* MultiThread */,
@@ -637,6 +641,15 @@
 			children = (
 			);
 			path = net;
+			sourceTree = "<group>";
+		};
+		CF8F2DDC2833B0BC005829D0 /* Memory */ = {
+			isa = PBXGroup;
+			children = (
+				CF8F2DDD2833B10C005829D0 /* OCMemory.h */,
+				CF8F2DDE2833B10C005829D0 /* OCMemory.m */,
+			);
+			path = Memory;
 			sourceTree = "<group>";
 		};
 		CF9E876D28090DF900996A6A /* QuickSort */ = {
@@ -1355,6 +1368,7 @@
 				CF06DB2227E0F74A003185A6 /* LCArray.mm in Sources */,
 				CF06DDBF27E170B3003185A6 /* LongestConsecutiveSequence.cpp in Sources */,
 				CFC2945027DB019E00B78C2B /* MinPathSum.cpp in Sources */,
+				CF8F2DDF2833B10C005829D0 /* OCMemory.m in Sources */,
 				CF4E2C6127D5047800A6C522 /* BTLevelOrderTraversal.cpp in Sources */,
 				CFEBC17627E7013100BC86DF /* MergeTwoBinaryTrees.cpp in Sources */,
 				CFC2948427DF407A00B78C2B /* IntersectionOfTwoLinkedLists.cpp in Sources */,

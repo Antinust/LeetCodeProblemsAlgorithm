@@ -25,15 +25,15 @@
     self = [super init];
     if (self) {
         _keepRunning = true;
-        [self testGCD_once];
-        [self testDispatchMain];
-        [self testMainQueueAndMainThread];
-        [self asyncAndGlobalQueue];
-        _queue = dispatch_queue_create("gcd_test_serial_q", DISPATCH_QUEUE_SERIAL);
-        dispatch_async(dispatch_get_global_queue(0, 0), ^{
-            [self initThread];
-        });
-        [self initThread];
+//        [self testGCD_once];
+//        [self testDispatchMain];
+//        [self testMainQueueAndMainThread];
+//        [self asyncAndGlobalQueue];
+//        _queue = dispatch_queue_create("gcd_test_serial_q", DISPATCH_QUEUE_SERIAL);
+//        dispatch_async(dispatch_get_global_queue(0, 0), ^{
+//            [self initThread];
+//        });
+//        [self initThread];
     }
     return self;
 }

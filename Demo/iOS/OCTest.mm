@@ -9,6 +9,7 @@
 #import "OCTest.h"
 #import "CopyTest.h"
 #import <objc/runtime.h>
+#import "OCMemory.h"
 
 @interface TGetClass : NSObject
 
@@ -194,6 +195,8 @@ typedef union UTest {
 - (instancetype)init {
     self = [super init];
     if (self) {
+        OCMemory * test = [OCMemory new];
+
 //        [self test_gcd];
 //        [self test_gcd2];
 
